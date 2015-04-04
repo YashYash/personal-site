@@ -1,5 +1,5 @@
 {
-  "name": "ikeda",
+  "name": "Persona-site",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -7,7 +7,7 @@
   },
   "author": "Yash Saxena",
   "keywords": [
-    "ikeda"
+    "Yash"
   ],
   "dependencies": {
     "angular-peer": "^1.0.0",
