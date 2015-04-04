@@ -94,6 +94,9 @@
 	line-height: 2em;
 	letter-spacing: 0.05em;
 }
+.professional-paragraphs.space-below {
+	margin-bottom:30px;
+}
 .professional-paragraphs.bold-font {
 	font-weight:600 !important;
 	min-width:100px !important;
