@@ -1,0 +1,31 @@
+<ion-view>
+	<ion-content class="mobile-ion-content" delegate-handle="workScroll">
+		<div id="slider-container" class="firefox-slide-box">
+		    <div id="slider-inner-container">
+		      <div id="slides-inner-container" class="z-3">
+		        <ion-slide-box on-slide-changed="slideHasChanged($index)">
+		          <ion-slide ng-repeat="slide in slides">
+		          	<div ng-include src="slide.path"></div>
+		          </ion-slide>
+		        </ion-slide-box>
+		      </div>
+		    </div>
+		 </div> 
+		 <div id="home-navigation">
+			 <div class="right-work-nav">
+			 	<span class="ion-ios-arrow-right arrow-icons right"></span>
+			 	<span ng-if="currentSlide <= 1" class="icon-briefcase briefcase-icon"></span>
+				<span ng-if="currentSlide > 1" class="arrow-text right">{{currentSlide - 1}}/10</span>			 	
+			 </div>
+			 <div class="up-home-nav">
+			 	<span class="ion-ios-arrow-up work-to-home-arrow"></span>
+			 	<span class="icon-home-2 work-to-home-icon"></span>
+			 </div>
+			 <div class="left-work-nav">
+			 <span class="ion-ios-arrow-left arrow-icons left"></span>
+			 	<span class="arrow-text left">{{currentSlide + 1}}/10</span>
+			 </div>
+		 </div>
+		<ion-infinite-scroll distance="-120px" on-infinite="toLanding()" style="display:none"></ion-infinite-scroll>
+	</ion-content>
+</ion-view>

@@ -1,0 +1,9 @@
+<ion-header-bar class="bar-subheader item-input-inset" id="work-mobile-header" ng-class="{'banner-height-decreased':(lowerHeight === 'true')}">
+	<h1 ng-if="lowerHeight === 'false'">"Dashboard"</h1>
+	<h1 ng-if="lowerHeight === 'true'">{{mainHeading}}</h1>
+</ion-header-bar>
+<ion-content delegate-handle="professionalFourScroll" on-scroll="professionalFourScrolling()" class="professional-slides" ng-class="{'content-height-decreased':(lowerHeight === 'true')}">
+	<div ng-repeat="paragraph in professional4Paragraphs" ng-attr-id="{{$index + 'paragraph'}}">	
+		<scroll-heading scrollPosition="'scrollHeadingOptions'" data="paragraph" index="$index"></scroll-heading>			
+	</div>
+</ion-content>

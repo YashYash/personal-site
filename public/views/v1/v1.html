@@ -1,0 +1,18 @@
+
+<div ui-view="nav" id="desktop-nav"></div>
+
+<div ui-view="content" id="content-container-desktop" ng-class="{'move-container' : (showSideNav === 'true')}"></div>
+
+<div id="mobile-container" ng-class="{'zoom-in':(zoomIn === 'true')}">
+	<ion-tabs class="tabs-icon-top no-animation" animation="no-animation">
+		<ion-tab title="Landing" icon="icon ion-social-buffer" href="#/tab/landing-mobile">
+			<ion-nav-view name="landing"></ion-nav-view>
+		</ion-tab>
+		<ion-tab title="Work" icon="icon ion-headphone" href="#/tab/work-mobile">
+			<ion-nav-view name="work"></ion-nav-view>
+		</ion-tab>
+		<ion-tab title="Entertainment" icon="icon ion-clipboard" href="#/tab/entertainment-mobile">
+			<ion-nav-view name="entertainment"></ion-nav-view>
+		</ion-tab>	
+	</ion-tabs>	
+</div>

@@ -1,0 +1,159 @@
+/* Landing Slide Container*/
+#landing-slide-container {
+  position: absolute;
+  height:250px;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  vertical-align: middle;
+  width:250px;
+  margin:auto;
+  text-align: center;
+}
+/* Left and right icons with arrows */
+
+.swipe-direction-icons.right {
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  font-size: 25px;
+}
+
+.swipe-direction-icons.right span {
+  font-size: 9px;
+  position: absolute;
+  top: -37px;
+  line-height: 1.7em;
+  width: 54px;
+  left:0;
+}
+
+.swipe-direction-icons.right span span {
+  position: absolute;
+  font-size: 27px;
+  top: -8px;
+  left: 57px;
+  -webkit-transition:0.5s;
+  -moz-transition:0.5s;
+  transition:0.5s;
+  animation: moveRight 0.8s infinite linear;    
+  -webkit-animation: moveRight 0.8s infinite linear;
+  -moz-animation: moveRight 0.8s infinite linear;
+}
+
+@-webkit-keyframes moveRight{
+  from {
+    left:57px;
+    opacity:1;
+  }
+  to {
+    left:67px;
+    opacity:0;
+  }
+}
+@-moz-keyframes moveRight{
+  from {
+    left:57px;
+    opacity:1;
+  }
+  to {
+    left:67px;
+    opacity:0;
+  }
+}
+.swipe-direction-icons.left {
+  top: 0;
+  bottom: 0;
+  right: 20px;
+  font-size: 30px;
+}
+.swipe-direction-icons.left span {
+  font-size: 9px;
+  position: absolute;
+  width: 45px;
+  left: -22px;
+  line-height: 1.7em;
+  text-align: right;
+  bottom: -40px;
+}
+.swipe-direction-icons.left span span {
+  color: white;
+  position: absolute;
+  font-size: 27px;
+  top: -7px;
+  left: -50px; 
+  -webkit-transition:0.5s;
+  -moz-transition:0.5s;
+  transition:0.5s;
+  animation moveLeft: 0.8s infinite ease;    
+  -webkit-animation: moveLeft 0.8s infinite ease;
+  -moz-animation: moveLeft 0.8s infinite ease;   
+}
+@-webkit-keyframes moveLeft{
+  from {
+    left:-50px;
+    opacity: 1;
+  }
+  to {
+    left:-60px;
+    opacity:0;
+  }
+}
+@-webkit-keyframes moveLeft{
+  from {
+    left:-50px;
+    opacity: 1;
+  }
+  to {
+    left:-60px;
+    opacity:0;
+  }
+}
+/* Headings */
+#landing-slide-container h3 {
+  font-size: 15px;
+  font-weight: 400;
+  color: white;
+}
+#landing-slide-container h1 {
+  color: white;
+  font-size: 30px;
+  font-weight: 100;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  padding: 5px 0px 7px 0px;
+  width: 102px;
+  margin: auto;
+}
+
+/*Earth*/
+#landing-slide-container #earth {
+  width: 100px;
+  height: 100px;
+  margin: 20px auto 0;
+  background: url(http://i58.tinypic.com/qq9503.jpg);
+  border-radius: 50%;
+  background-size: 610px;
+  box-shadow: inset 28px 0px 80px 31px rgb(0, 0, 0), inset -6px 0 12px -2px rgba(255, 255, 255, 0.9);
+  -webkit-animation: rotateEarth 12s infinite linear;
+  -moz-animation: rotateEarth 12s infinite linear;
+  animation: rotateEarth 12s infinite linear;
+  border: 1px solid white;
+}
+@-webkit-keyframes rotateEarth {
+  from {
+    background-position: 0px 0px;
+  }
+  to {
+    background-position: 610px 0px;
+  }
+}
+@-moz-keyframes rotateEarth {
+  from {
+    background-position: 0px 0px;
+  }
+  to {
+    background-position: 610px 0px;
+  }
+}

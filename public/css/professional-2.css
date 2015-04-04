@@ -1,0 +1,44 @@
+/* The main heading*/
+h1#button-heading {
+	color:#4C4C4C;
+	font-weight: 100;
+	text-align: center;
+	font-weight: 600;	
+	padding-bottom:30px;
+}
+
+/* Total downloads container */
+#total-downloads-container {
+	background: black;
+	color: white;
+	padding: 20px 0px;
+	border: 10px solid rgba(1,1,1,0.05);
+	background-clip: padding-box;
+	text-align: center;
+}
+
+#total-downloads-container h1 {
+	font-size:25px;
+	color:#22c1ee;
+	font-weight:100;
+	text-align: center;
+	-webkit-transition:0.3s;
+	-moz-transition:0.3s;
+	transition:0.3s;
+}
+
+#total-downloads-container p {
+	font-size:10px;
+	-webkit-transition:0.3s;
+	-moz-transition:0.3s;
+	transition:0.3s;	
+}
+
+@media(min-width:420px) {
+	#total-downloads-container h1 {
+		font-size:40px;
+	}
+	#total-downloads-container p {
+		font-size: 14px
+	}
+}

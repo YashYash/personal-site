@@ -1,0 +1,29 @@
+<ion-header-bar class="bar-subheader item-input-inset" id="work-mobile-header" ng-class="{'banner-height-decreased':(lowerHeight === 'true')}">
+	<img src="http://dff2h0hbfv6w4.cloudfront.net/images/logos/logo-white-200.png">
+</ion-header-bar>
+<ion-content delegate-handle="professionalOneScroll" on-scroll="professionalOneScrolling()" class="professional-slides" ng-class="{'content-height-decreased':(lowerHeight === 'true')}">
+	<p class="professional-paragraphs">I have worked at SpotOn.it for:</p>
+	<div id="time-worked-container">
+		<div>
+			<h1>{{workDuration.hours}}</h1> <span>hours</span>
+		</div>
+		<div>
+			<h1>{{workDuration.minutes}}</h1> <span>minutes</span>
+		</div>
+		<div>
+			<h1>{{workDuration.seconds | number : 0}}</h1> <span>seconds</span>
+		</div>
+	</div>
+
+	<p class="professional-paragraphs">So its pretty much almost been a year. SpotON is a series A funded start up, out of Stanford's startX incubator, that started out in Menlo Park, Califronia and is now in Redwood City, California. The CEO is a Stanford Graduate.</p>
+
+	<p class="professional-paragraphs">
+		I joined SpotON as an intern, and now I am the lead Front end engineer who has to touch the backend as well. Ever since I started developing, I've always loved front end, because it is what the user end's up experiencing. Being a fornt end  developer has helped me get a better sense of product and UI/UX. At SpotON I have been fortunate enough to work with a very talented and experienced designer, who I have learnt a lot from. Working here has also taught me a lot of back end programming.  I have built a lot of scrappers using cheerio and mongoose. I have written multiple API's that create routes and send back data to the template. I've implemented Socket.io withing API calls to monitor changes in real time. At SpotOn we use the ff and async library which helps organize code, and makes it easy to read. I have added fields to schemas as well. So you pretty much end up working as a Full Stack developer.
+	</p>
+
+	<p class="professional-paragraphs">
+		SpotOn is on a mission to build products that help you design your day and ultimately, your life. Time is your scarcest resource, but from calendars to todo lists, no design can easily answer your biggest question: what is the optimal thing for me to do with my time? At SpotoOn we build products that allow people to save time, and simultaniously help companies and franchises gain user engagement. We have multiple products at SpotOn that have returning users.	
+	</p> 
+
+	<h1 class="shimmer">Swipe left to see what I've built at SpotON.</h1>
+</ion-content>

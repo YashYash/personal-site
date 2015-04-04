@@ -1,0 +1,13 @@
+<ion-view>
+	<ion-content>
+		<ion-refresher on-refresh="toLanding()"></ion-refresher>
+	    <article class="post" ng-repeat="item in data | orderBy:'name'">
+	        <h1 affix-within-container=".post">
+	            {{item.name}}
+	        </h1>
+	        <main>
+	            {{item.name}}
+	        </main>
+	    </article>
+	</ion-content>
+</ion-view>

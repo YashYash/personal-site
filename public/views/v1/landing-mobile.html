@@ -1,0 +1,37 @@
+<ion-view>
+	<ion-content class="mobile-ion-content" delegate-handle="landingScroll">
+		<ion-refresher on-refresh="toWork()"></ion-refresher>
+		<span class="icon-briefcase swipe-direction-icons down" ng-class="{'activate-icon':(activatedIcon === 'one')}" ng-if="currNumber === '0'">
+			<span ng-class="{'showInstructions':(activatedIcon === 'one')}">
+				My Work Pull Down
+				<span class="ion-ios-arrow-down" ng-class="{'showInstructions':(activatedIcon === 'one')}"></span>
+			</span> 
+		</span>	
+		<span ng-if="currNumber !== '0'" class="icon-briefcase" id="briefcase-secondary">
+			<span class="ion-ios-arrow-down"></span>
+		</span>	
+
+		<span class="icon-tv swipe-direction-icons up" ng-class="{'activate-icon':(activatedIcon === 'three')}" ng-if="currNumber === '0'">
+			<span ng-class="{'showInstructions':(activatedIcon === 'three')}">
+				Entertainment Pull Up
+				<span class="ion-ios-arrow-up" ng-class="{'showInstructions':(activatedIcon === 'three')}"></span>
+			</span> 
+		</span>
+		<span ng-if="currNumber !== '0'" class="icon-tv" id="tv-secondary">
+			<span class="ion-ios-arrow-up"></span>
+		</span>
+
+		  <div id="slider-container" class="firefox-slide-box">
+		    <div id="slider-inner-container">
+		      <div id="slides-inner-container" class="z-3">
+		        <ion-slide-box on-slide-changed="slideHasChanged($index)">
+		          <ion-slide ng-repeat="slide in slides">
+		          	<div ng-include src="slide.path"></div>
+		          </ion-slide>
+		        </ion-slide-box>
+		      </div>
+		    </div>
+		  </div> 
+		<ion-infinite-scroll distance="-120px" on-infinite="toEntertainment()" style="display:none"></ion-infinite-scroll>
+	</ion-content>
+</ion-view>

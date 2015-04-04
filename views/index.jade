@@ -1,0 +1,67 @@
+doctype
+html(lang='en' ng-app="app")
+	head
+		meta(charset='utf-8')
+		meta(name="viewport" content="minimal-ui")
+		meta(name="viewport" content="width=device-width, initial-scale=1, minimal-ui")
+
+		//- ionic
+		script(src="/javascripts/vendor/ionic/js/ionic.bundle.min.js")
+		link(href="/javascripts/vendor/ionic/css/ionic.css" rel="stylesheet")
+
+		script(src="/javascripts/vendor/ngStorage.min.js")
+		script(src="/javascripts/vendor/moment.min.js")
+		script(src="/javascripts/vendor/jquery.min.js") 
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js")
+
+		//- App.js
+		script(src="/javascripts/app.js")
+
+		//- Controllers
+		script(src="/javascripts/controllers/GlobalController.js")
+		script(src="/javascripts/controllers/RootController.js")
+		script(src="/javascripts/controllers/NavController.js")
+		script(src="/javascripts/controllers/ContentController.js")
+		script(src="/javascripts/controllers/LandingController.js")
+		script(src="/javascripts/controllers/WorkController.js")
+		script(src="/javascripts/controllers/EntertainmentController.js")
+
+
+		//- Directives
+		script(src="/javascripts/directives/ngLoad.js")
+		script(src="/javascripts/directives/fixedScroll.js") 
+		script(src="/javascripts/directives/scrollHeading.js") 
+
+
+		//- Services
+		script(src="/javascripts/services/DataService.js")
+
+		link(rel="stylesheet" href="/stylesheets/global.styl")
+
+		//- Css
+		link(rel="stylesheet" href="/css/global.css")
+		link(rel="stylesheet" href="/css/nav.css")
+		link(rel="stylesheet" href="/css/content.css")
+		link(rel="stylesheet" href="/css/landing.css")			
+		link(rel="stylesheet" href="/css/mobile-slides.css")
+		link(rel="stylesheet" href="/css/tabs.css")
+		link(rel="stylesheet" href="/css/landing-mobile.css")
+		link(rel="stylesheet" href="/css/landing-slide.css")
+		link(rel="stylesheet" href="/css/work-mobile.css")
+		link(rel="stylesheet" href="/css/work-mobile-slide.css")
+		link(rel="stylesheet" href="/css/professional-1.css")
+		link(rel="stylesheet" href="/css/professional-2.css")
+		link(rel="stylesheet" href="/css/professional-3.css")
+		link(rel="stylesheet" href="/css/professional-4.css")
+		//- Fonts
+		link(href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css')
+		link(href="//fontastic.s3.amazonaws.com/ajkCKZcprWV8fCCd7UykoN/icons.css" rel="stylesheet")      
+		link(href="//code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css" rel="stylesheet")
+		link(href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css')
+		link(href="//fontastic.s3.amazonaws.com/ajkCKZcprWV8fCCd7UykoN/icons.css" rel="stylesheet")
+
+	//- Title
+	title Full Stack Gangster - Yash
+
+	//- Body
+	body(ui-view="global")    

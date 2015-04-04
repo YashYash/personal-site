@@ -1,0 +1,143 @@
+.all-work-landing-tiles {
+	position: absolute;
+	width:50%;
+	height:100%;
+	-webkit-transition:0.5s;
+	-moz-transition:0.5s;
+	transition:0.5s;
+	overflow: hidden;	
+}
+.all-work-landing-tiles .briefcase {
+	position: absolute;
+	right: -14px;
+	font-size: 28px;
+	top:20px;
+}
+.all-work-landing-tiles .briefcase.left-briefcase {
+		right: -14px;
+		color: white;
+}
+.all-work-landing-tiles .briefcase.right-briefcase {
+		left: -14px;
+		color: black;
+}
+.all-work-landing-tiles .slide-heading {
+	position: absolute;
+	top: 55px;
+	font-size: 20px;
+}
+.all-work-landing-tiles .slide-heading.left-text {
+	color:white;
+	right:1px;
+}
+.all-work-landing-tiles .slide-heading.right-text {
+	color:black;
+	left:1px;
+}
+.all-work-landing-tiles h1 {
+	position: absolute;
+	font-size: 22px;
+	height: 70px;
+	margin: auto;
+	left: 0;
+	right: 0;
+	font-weight: 100;	
+	width:127px;
+}
+
+.all-work-landing-tiles h1 span {
+	font-size: 9px;
+	font-weight: bold;
+	display: block;
+	margin-top:5px;
+	margin-bottom:5px;	
+}
+#personal-tile {
+	top:0;
+	left:0;
+	background:black;
+}
+#personal-tile h1 {
+	color: white;
+	bottom: 167px;
+	top:0;
+	text-align: right;
+}
+#professional-tile {
+	top:0;
+	right:0;
+	background:white;
+}
+
+#professional-tile h1 {
+	color: black;
+	top: 167px;
+	bottom:0;
+	text-align: left;
+}
+.work-landing-arrows {
+	position: absolute;
+	font-size: 66px;
+	height: 66px;
+	width: 25px;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	left: 0;
+	right: 0;
+}
+
+.work-landing-arrows.right-arrow {
+	color:white;
+	animation: slideRight 0.8s infinite linear;    
+	-webkit-animation: slideRight 0.8s infinite linear;
+	-moz-animation: slideRight 0.8s infinite linear;	
+}
+
+.work-landing-arrows.left-arrow {
+	animation: slideLeft 0.8s infinite linear;    
+	-webkit-animation: slideLeft 0.8s infinite linear;
+	-moz-animation: slideLeft 0.8s infinite linear;
+}
+
+@-webkit-keyframes slideRight{
+  from {
+    left:0;
+    opacity:1;
+  }
+  to {
+    left:20px;
+    opacity:0;
+  }
+}
+@-moz-keyframes slideRight{
+  from {
+    left:0px;
+    opacity:1;
+  }
+  to {
+    left:20px;
+    opacity:0;
+  }
+}
+
+@-webkit-keyframes slideLeft{
+  from {
+    right:0;
+    opacity:1;
+  }
+  to {
+    right:20px;
+    opacity:0;
+  }
+}
+@-moz-keyframes slideLeft{
+  from {
+    right:0px;
+    opacity:1;
+  }
+  to {
+    right:20px;
+    opacity:0;
+  }
+}
