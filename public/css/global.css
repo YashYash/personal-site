@@ -42,7 +42,7 @@ li {
 }
 /*font-sizes*/
 h1 {
-  font-size:30px;
+  font-size:25px;
 }
 p {
   font-size:14px;
@@ -50,6 +50,9 @@ p {
 button {
 	-webkit-appearance: none;
 	-webkit-border-radius:0;
+  background: none;
+  border: none;
+  outline:0;  
 }
 input {
 	-webkit-appearance: none;
@@ -93,7 +96,7 @@ input {
     -o-transform: rotate(360deg);
   }
 }
-@-webkit-keyframes rotating /* Safari and Chrome */ {
+@-webkit-keyframes rotating {
   from {
     transform: rotate(0deg);
     -ms-transform: rotate(0deg);
@@ -117,15 +120,62 @@ input {
   animation: rotating 1s linear infinite;
 }
 
+@-webkit-keyframes panorama {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+@-moz-keyframes panorama {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+@-o-keyframes panorama {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+@-ms-keyframes panorama {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+@keyframes panorama {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
 
-h1 {
- 	font-size:25px;
-}
-button {
-  background: none;
-  border: none;
-  outline:0;
-}
 .placeholder::-webkit-input-placeholder {
   color: #46454a;
 }
@@ -206,4 +256,20 @@ button {
   input:focus {
     font-size: 14px;
   }
+}
+
+/* Global Transitions */
+.transition-short {
+  -webkit-transition: opacity 0.5s, bottom 0.5s, top 0.5s, left 0.5s, right 0.5s, color 0.5s;
+  -moz-transition: opacity 0.5s, bottom 0.5s, top 0.5s, left 0.5s, right 0.5s, color 0.5s;
+  -o-transition: opacity 0.5s, bottom 0.5s, top 0.5s, left 0.5s, right 0.5s, color 0.5s;
+  -ms-transition: opacity 0.5s, bottom 0.5s, top 0.5s, left 0.5s, right 0.5s, color 0.5s;
+  transition: opacity 0.5s, bottom 0.5s, top 0.5s, left 0.5s, right 0.5s, color 0.5s;
+}
+.transition-long {
+  -webkit-transition: opacity 1s, bottom 1s, top 1s, left 1s, right 1s, color 1s, border 1s;
+  -ms-transition: opacity 1s, bottom 1s, top 1s, left 1s, right 1s, color 1s, border 1s;
+  -o-transition: opacity 1s, bottom 1s, top 1s, left 1s, right 1s, color 1s, border 1s;
+  -moz-transition: opacity 1s, bottom 1s, top 1s, left 1s, right 1s, color 1s, border 1s;
+  transition: opacity 1s, bottom 1s, top 1s, left 1s, right 1s, color 1s, border 1s;
 }

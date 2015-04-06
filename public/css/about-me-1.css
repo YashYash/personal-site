@@ -1,0 +1,151 @@
+.about-me-container {
+  height: auto;
+}
+/* banner-image-container */
+
+.banner-image-container {
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0 40px black;
+  height: 200px;
+}
+
+.banner-photo {
+  background: url('http://upload.wikimedia.org/wikipedia/commons/c/c7/Diani_Beach_Sunrise_Kenya.jpg');
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  position: relative;
+  background-size: 155% 109%;
+  background-position: 0% 0%;
+  -webkit-animation: panorama 40s infinite;
+  -ms-animation: panorama 40s infinite;
+  -o-animation: panorama 40s infinite;
+  -moz-animation: panorama 40s infinite;
+  animation: panorama 40s infinite;
+  box-shadow: inset 0 0 100px black;
+}
+
+.banner-photo .image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(1, 1, 1, 0.3);
+}
+
+.banner-image-container .profile-picture {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 100%;
+  box-shadow: 0 0 30px black;
+  bottom: -60px;
+  background: url('https://s3.amazonaws.com/spotonit/images/other/yash');
+  background-size: cover;
+  z-index: 1;
+  border: 6px solid rgba(238, 238, 238, 0.1);
+  background-clip: padding-box;
+}
+
+.banner-photo .full-name {
+  color: white;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+  font-weight: 100;
+  margin: auto;
+  font-size: 30px;
+  height: 30px;
+  position: absolute;
+  top: 30px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+}
+
+.banner-photo .full-name.show-full-name {
+  opacity: 1;
+  top: 0;
+}
+
+.about-me-text {
+  position: relative;
+  height: auto;
+  background: rgba(1, 1, 1, 0.9);
+}
+
+.about-me-text div {
+  position: relative;
+  padding-top: 80px;
+  color: white;
+  text-align: center;
+  margin: auto;
+}
+
+.about-me-text div p {
+  font-weight: 500;
+  font-size: 14px;
+  margin: 0px;
+  padding-bottom: 20px;
+}
+.about-me-text div p.about-me-paragraph {
+  padding: 0 10px;
+  line-height: 1.9em;
+  padding-top: 20px;
+  border-top: 1px solid rgba(238,283,238,0.1);
+  width: 90%;
+  margin: auto;
+  opacity: 0;
+  color: rgba(238,238,238,1);
+  padding-bottom:50px;
+}
+.about-me-text div p.about-me-paragraph.show-about-me-paragraph {
+	opacity:1;
+}
+.about-me-text div p span {
+  opacity: 0;
+  position: relative;
+  top: 10px;
+}
+
+.about-me-text div p span.show-skill {
+  top: 0;
+  opacity: 1;
+}
+/* Media Queries */
+
+@media(min-width:450px) {
+  .banner-photo {
+    background-size: 155% 120%;
+  }
+  .banner-image-container {
+  	height:250px;
+  }
+}
+
+@media(min-width:600px) {
+  .banner-photo {
+    background-size: 155% 135%;
+  }
+  .banner-image-container {
+  	height:300px;
+  }  
+}
+
+@media(min-width:800px) {
+  .banner-photo {
+    background-size: 155% 150%;
+  }
+}
+
+@media(min-width:900px) {
+  .banner-photo {
+    background-size: 155% 160%;
+  }
+}

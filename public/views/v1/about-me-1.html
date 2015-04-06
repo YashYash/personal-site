@@ -1,0 +1,22 @@
+<ion-scroll direction="y" class="about-me-container"> 
+  <div class="banner-image-container">
+    <div class="banner-photo">
+      <h1 class="full-name transition-long" ng-class="{'show-full-name':(showFullName)}">Yash Saxena</h1>
+      <div class="image-overlay"></div>
+    </div>
+    <div class="profile-picture">
+    </div>
+  </div>
+  <div class="about-me-text">
+    <div>
+      <p>
+        <span class="transition-long" ng-class="{'show-skill':(showSkill > 0)}">Entrepreneur </span>
+        <span class="transition-long" ng-class="{'show-skill':(showSkill > 1)}">- Developer </span>
+        <span class="transition-long" ng-class="{'show-skill':(showSkill > 2)}">- Designer</span>
+      </p>
+      <p class="about-me-paragraph transition-long" ng-class="{'show-about-me-paragraph':(showAboutMeParagraph)}">
+      	Thank you for visiting my personal site, it's a pleasure to have you. My name is Yash. I am currently the lead front end engineer at Spoton Computing. I hope to one day contribute to technology, by runnning my own successful tech start up. Until that day arrives, I will continue to stay in touch with cutting edge technologies, business models and UI/UX designs. Swipe left to see my confidence chart.
+      </p>
+    </div>
+  </div>
+</ion-scroll>
