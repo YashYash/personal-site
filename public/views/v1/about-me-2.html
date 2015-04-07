@@ -14,13 +14,17 @@
     <ion-scroll direction='y' style="color:white; margin-bottom:50px;">
       <div style="margin-top:30px">
         <div class="code-skill" ng-repeat="skill in codeSkills" ng-show="activeSkill === 1">
-          <div style="background:url({{skill.logo}})" class="skill-icon"></div>
+          <div style="background:url({{skill.logo}})" class="skill-icon code">
+          	<div class="icon-gradient"></div>
+          </div>
           <span class="code-skill-name">{{skill.name}}</span>
           <div class="skill-level code" style="width: {{skill.level}}%" ng-class="{'no-width': (noWidth)}"></div>
         </div>
       </div>
       <div class="code-skill" ng-repeat="skill in designSkills" ng-show="activeSkill === 2">
-        <div style="background:url({{skill.logo}})" class="skill-icon"></div>
+        <div style="background:url({{skill.logo}})" class="skill-icon">
+        	<div class="icon-gradient"></div>
+        </div>
         <span class="code-skill-name">{{skill.name}}</span>
         <div class="skill-level design" style="width: {{skill.level}}%" ng-class="{'no-width': (noWidth)}"></div>
       </div>
