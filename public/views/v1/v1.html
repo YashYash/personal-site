@@ -1,10 +1,24 @@
 <!-- v1.html - styled using - content.css -->
 <redirect-resize>
   <div class="global-background"></div>
-  <div ng-include="'/views/v1/desktop/home.html'"></div>
+  <div class="loading-desktop all-directions-opacity-long" ng-class="{'done-loading':(doneLoading), 'hide':(doneLoadingHide)}">
+    <div class="heading">
+      <h1 class="all-directions-opacity-medium" ng-class="{'show-heading': (showIntroHeading)}">{{introText}}</h1>
+    </div>
+    <div class="visit-count all-directions-opacity-long" ng-class="{'show-visit-count':(showVisitCount)}">
+      12,123,123
+    </div>
+    <div class="loading-bar">
+      <div ng-class="{'loading-now': (loading)}"></div>
+    </div>
+  </div>
+    <!-- Landing Page -->
+  <div ng-include="'/views/v1/desktop/home.html'" ng-controller="HomeController" ng-class="{'hide-home-screen':(hideHomePage)}" class="home-screen-container"></div>
+
   <!-- Desktop -->
-  <div ui-view="nav" id="desktop-nav"></div>
+  <div ui-view="nav" class="desktop-nav"></div>
   <div ui-view="content" class="content-container-desktop"></div>
+
   <!-- Mobile View -->
   <div id="mobile-container" ng-class="{'zoom-in':(zoomIn === 'true')}">
     <ion-tabs class="tabs-icon-top no-animation" animation="no-animation">

@@ -73,7 +73,16 @@ app.config(['$stateProvider','$urlRouterProvider',function($stateProvider, $urlR
           controller: 'EntertainmentDesktopController'
         }
       }
-    })            
+    }) 
+    .state('app.v1.contact-desktop', {
+      url: '/entertainment',
+      views: {
+        'content@app.v1': {
+          templateUrl: '/views/v1/desktop/contact.html',
+          controller: 'ContactDesktopController'
+        }
+      }
+    })                
     .state('app.v1.landing-mobile', {
       url: '/landing-mobile',
       views: {

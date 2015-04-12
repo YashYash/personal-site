@@ -1,11 +1,26 @@
-<div class="home-screen" ng-controller="HomeController">
-  <div class="dark-overlay"></div>
-  <div class="stars">
+<div class="home-screen all-directions-opacity-long" ng-class="{'fadeout-home-page': (fadeOutHomePage)}">
+  <div class="stars" ng-class="{'lessen-opacity': (lessenOpacity)}" ng-class="{'fadeout-home-page': (fadeOutHomePage)}">
     <div class="stars-overlay"></div>
   </div>
-  <img src="http://collection.gevorgian.ru/img/born-2-fly/mountains.png" class="mountains">
-  <div class="home-content">
-  	<h1>Yash Saxena</h1>
-  	<p><span>Enterpreneur </span> <span>- Developer </span><span>- Designer</span></p>
+  <img src="http://collection.gevorgian.ru/img/born-2-fly/mountains.png" class="mountains all-directions-opacity-long" ng-class="{'fadeout-home-page': (fadeOutHomePage)}">
+  <div class="current-page all-directions-opacity-medium" ng-class="{'show-current-page': (showCurrentPage), 'fadeout-home-page': (fadeOutHomePage)}">
+  	<h1>{{currentHeading}}</h1>
+  	<p>{{currentSubHeading}}</p>
+  </div>
+  <div class="home-content all-directions-opacity-long" ng-class="{'fadeout-home-page': (fadeOutHomePage)}">
+    <h1 class="all-directions-opacity-long" ng-class="{'show-name':(showName)}">
+    	Yash Saxena
+    </h1>
+    <p ng-class="{'show-border-bottom': (showBorderBottom)}" class="all-directions-opacity-long">
+      <span ng-class="{'show-sub-heading': (showSubHeadingOne)}" class="all-directions-opacity-long">Enterpreneur </span>
+      <span ng-class="{'show-sub-heading': (showSubHeadingTwo)}" class="all-directions-opacity-long">- Developer </span>
+      <span ng-class="{'show-sub-heading': (showSubHeadingThree)}" class="all-directions-opacity-long">- Designer</span>
+    </p>
+    <ul>
+      <li class="ion-ios-person all-directions-opacity-long" ng-mouseleave="previewState('none')" ng-mouseenter="previewState('about')" ng-class="{'active':(currentPreviewState === 'about'), 'show-circle':(showCircleOne)}" ng-click="goToView()"></li>
+      <li class="icon-briefcase all-directions-opacity-long" ng-mouseleave="previewState('none')" ng-mouseenter="previewState('work')" ng-class="{'active':(currentPreviewState === 'work'), 'show-circle':(showCircleTwo)}" ng-click="goToView()"></li>
+      <li class="icon-tv all-directions-opacity-long" ng-mouseleave="previewState('none')" ng-mouseenter="previewState('entertainment')" ng-class="{'active':(currentPreviewState === 'entertainment'), 'show-circle':(showCircleThree)}" ng-click="goToView()"></li>
+      <li class="ion-ios-telephone all-directions-opacity-long" ng-mouseleave="previewState('none')" ng-mouseenter="previewState('contact')" ng-class="{'active':(currentPreviewState === 'contact'), 'show-circle':(showCircleFour)}" ng-click="goToView()"></li>
+    </ul>
   </div>
 </div>

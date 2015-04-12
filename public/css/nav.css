@@ -1,0 +1,46 @@
+.desktop-nav {
+  display: none;
+  z-index: 10;
+  color: white;
+  position: fixed;
+  height: 40px;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.desktop-nav .hamburger {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  width: 50px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.desktop-nav .hamburger .bars {
+  width: 50%;
+  position: absolute;
+  background: white;
+  border-radius: 1px;
+  height: 2px;
+}
+
+
+.desktop-nav .hamburger .bars.one {
+  top: 0;
+}
+
+.desktop-nav .hamburger .bars.two {
+  top: 7px;
+}
+
+.desktop-nav .hamburger .bars.three {
+  top: 15px;
+}
+
+@media(min-width:1024px) {
+  .desktop-nav {
+    display: block;
+  }
+}
