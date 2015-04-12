@@ -42,16 +42,43 @@ app.config(['$stateProvider','$urlRouterProvider',function($stateProvider, $urlR
       url: '/landing',
       views: {
         'content@app.v1': {
-          templateUrl: '/views/v1/landing.html',
-          controller: 'LandingController'
+          templateUrl: '/views/v1/desktop/landing.html',
+          controller: 'LandingDesktopController'
         }
       }
     })
+    .state('app.v1.work-desktop', {
+      url: '/work',
+      views: {
+        'content@app.v1': {
+          templateUrl: '/views/v1/desktop/work.html',
+          controller: 'WorkDesktopController'
+        }
+      }
+    })  
+    .state('app.v1.about-desktop', {
+      url: '/about',
+      views: {
+        'content@app.v1': {
+          templateUrl: '/views/v1/desktop/about.html',
+          controller: 'AboutDesktopController'
+        }
+      }
+    })
+    .state('app.v1.entertainment-desktop', {
+      url: '/entertainment',
+      views: {
+        'content@app.v1': {
+          templateUrl: '/views/v1/desktop/entertainment.html',
+          controller: 'EntertainmentDesktopController'
+        }
+      }
+    })            
     .state('app.v1.landing-mobile', {
       url: '/landing-mobile',
       views: {
         'landing@app.v1': {
-          templateUrl: '/views/v1/landing-mobile.html',
+          templateUrl: '/views/v1/mobile/landing-mobile.html',
           controller: 'LandingController'
         }
       }
@@ -60,7 +87,7 @@ app.config(['$stateProvider','$urlRouterProvider',function($stateProvider, $urlR
       url: '/work-mobile',
       views: {
         'work@app.v1': {
-          templateUrl: '/views/v1/work-mobile.html',
+          templateUrl: '/views/v1/mobile/work-mobile.html',
           controller: 'WorkController'
         }
       }
@@ -69,7 +96,7 @@ app.config(['$stateProvider','$urlRouterProvider',function($stateProvider, $urlR
       url: '/entertainment-mobile',
       views: {
         'entertainment@app.v1': {
-          templateUrl: '/views/v1/entertainment-mobile.html',
+          templateUrl: '/views/v1/mobile/entertainment-mobile.html',
           controller: 'EntertainmentController'
         }
       }

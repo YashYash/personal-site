@@ -1,0 +1,56 @@
+/* Stars Animation */
+@-webkit-keyframes starsBackground {
+	0% {
+		left:0;
+	}
+	50% {
+		left:-70%;
+	}
+	100% {
+		left:0;
+	}
+}
+@-moz-keyframes starsBackground {
+	0% {
+		left:0;
+	}
+	50% {
+		left:-70%;
+	}
+	100% {
+		left:0;
+	}
+}
+@-ms-keyframes starsBackground {
+	0% {
+		left:0;
+	}
+	50% {
+		left:-70%;
+	}
+	100% {
+		left:0;
+	}
+}
+@-o-keyframes starsBackground {
+	0% {
+		left:0;
+	}
+	50% {
+		left:-70%;
+	}
+	100% {
+		left:0;
+	}
+}
+@keyframes starsBackground {
+	0% {
+		left:0;
+	}
+	50% {
+		left:-70%;
+	}
+	100% {
+		left:0;
+	}
+}

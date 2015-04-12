@@ -1,3 +1,7 @@
+/* Hide Tabs on mobile landing */
+.tabs {
+  display: none;
+}
 .swipe-direction-icons {
   position: absolute;
   height: 20px;

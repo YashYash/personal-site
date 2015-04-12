@@ -26,16 +26,16 @@ app.controller('LandingController', [
     $scope.noWidth = true;
     $scope.slides = [{
       number: '1',
-      path: '/views/v1/contact-slide.html'
+      path: '/views/v1/mobile/contact/contact-slide.html'
     }, {
       number: '0',
-      path: '/views/v1/landing-slide.html'
+      path: '/views/v1/mobile/landing-slide.html'
     }, {
       number: '1',
-      path: '/views/v1/about-me-1.html'
+      path: '/views/v1/mobile/about/about-me-1.html'
     }, {
       number: '2',
-      path: '/views/v1/about-me-2.html'
+      path: '/views/v1/mobile/about/about-me-2.html'
     }];
     $timeout(function() {
       $ionicSlideBoxDelegate.slide(1, 0);

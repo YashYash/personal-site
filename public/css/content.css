@@ -1,5 +1,38 @@
+/* Global Background */
+
+.global-background {
+  position: fixed;
+  background: #282828;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+
+/* UI-views */
+
+.content-container-desktop {
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  -ms-perspective: 1000px;
+  -o-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background: green;
+}
+
+
 @media(min-width:1024px) {
-	#mobile-container {
-		display: none;
-	}
+  #mobile-container {
+    display: none;
+  }
 }

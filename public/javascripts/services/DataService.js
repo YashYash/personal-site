@@ -11,37 +11,37 @@ app.factory('DataService', [
       WorkSlides: function() {
         var slides = [{
           name: '5',
-          path: '/views/v1/personal-5.html'
+          path: '/views/v1/mobile/work/personal-5.html'
         }, {
           name: '4',
-          path: '/views/v1/personal-4.html'
+          path: '/views/v1/mobile/work/personal-4.html'
         }, {
           name: '3',
-          path: '/views/v1/personal-3.html'
+          path: '/views/v1/mobile/work/personal-3.html'
         }, {
           name: '2',
-          path: '/views/v1/personal-2.html'
+          path: '/views/v1/mobile/work/personal-2.html'
         }, {
           name: '1',
-          path: '/views/v1/personal-1.html'
+          path: '/views/v1/mobile/work/personal-1.html'
         }, {
           name: '0',
-          path: '/views/v1/work-mobile-slide.html'
+          path: '/views/v1/mobile/work/work-mobile-slide.html'
         }, {
           name: '1',
-          path: '/views/v1/professional-1.html'
+          path: '/views/v1/mobile/work/professional-1.html'
         }, {
           name: '2',
-          path: '/views/v1/professional-2.html'
+          path: '/views/v1/mobile/work/professional-2.html'
         }, {
           name: '3',
-          path: '/views/v1/professional-3.html'
+          path: '/views/v1/mobile/work/professional-3.html'
         }, {
           name: '4',
-          path: '/views/v1/professional-4.html'
+          path: '/views/v1/mobile/work/professional-4.html'
         }, {
           name: '5',
-          path: '/views/v1/professional-5.html'
+          path: '/views/v1/mobile/work/professional-5.html'
         }];
         return slides;
       },

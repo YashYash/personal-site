@@ -5,5 +5,5 @@ app.controller('GlobalController', [
 	function($scope, $state, $rootScope) {
 	'use strict';
 	console.log('#### Global Controller');
-	$state.go('app.v1.landing');
+	// $state.go('app.v1.landing-desktop');
 }]);

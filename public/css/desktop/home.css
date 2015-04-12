@@ -1,0 +1,80 @@
+/* Home Screen */
+
+.home-screen {
+  display: none;
+}
+/* Dark Overlay*/
+/* Stars */
+
+.stars {
+  background: url('http://thinkinc.org.au/wp-content/uploads/2014/01/centre-of-milky-way-panorama-2011-final.jpg');
+  background-size: cover;
+  width: 170%;
+  height: 100%;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: inset 0 0 400px black;
+  -webkit-animation: starsBackground 250s infinite ease;
+  -moz-animation: starsBackground 250s infinite ease;
+  -ms-animation: starsBackground 250s infinite ease;
+  -o-animation: starsBackground 250s infinite ease;
+  animation: starsBackground 250s infinite ease;
+}
+
+.stars .stars-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: black;
+  background: rgba(1, 1, 1, 0.4);
+}
+/* Mountains */
+
+.mountains {
+  position: absolute;
+  bottom: -200px;
+  right: 0;
+  z-index: 3;
+  width: 115%;
+}
+/* Home Content */
+
+.home-content {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  margin: auto;
+  text-align: center;
+}
+
+.home-content h1 {
+  color: white;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid white;
+  border-bottom: 1px solid rgba(238, 238, 238, 0.3);
+}
+
+.home-content p {
+	color:white;
+	font-weight:600;
+	margin:0;
+	padding-bottom:10px;
+	border-bottom: 1px solid white;
+	border-bottom: 1px solid rgba(238, 238, 238, 0.3);
+}
+
+@media(min-width:1024px) {
+  .home-screen {
+    display: block;
+  }
+}
