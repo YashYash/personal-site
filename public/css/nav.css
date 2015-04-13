@@ -1,6 +1,6 @@
 .desktop-nav {
   display: none;
-  z-index: 10;
+  z-index: 100;
   color: white;
   position: fixed;
   height: 40px;

@@ -8,7 +8,9 @@ app.directive('redirectResize', function($state) {
 
     	redirect = function() {
     		if($(window).width() > 1024) {
-    			$state.go('app.v1.landing-desktop');
+          if($state.current.name !== 'app.v1.about-desktop') {
+            $state.go('app.v1.landing-desktop');
+          }
     		} else {
     			$state.go('app.v1.landing-mobile');
     		}

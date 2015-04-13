@@ -1,0 +1,245 @@
+/* About overall Container */
+
+.about-desktop-container {
+  position: relative;
+  width: 85%;
+  margin: auto;
+  height: 100%;
+  box-shadow: 0 0 45px;
+  overflow: scroll;
+  background: #323232;
+  max-width: 1000px;
+}
+
+.about-desktop-container::-webkit-scrollbar {
+  display: none;
+}
+
+.about-desktop-container::-moz-scrollbar {
+  display: none;
+}
+/* Tiles image up top */
+
+.about-desktop-container .tiles-banner {
+  width: 100%;
+  background: url('http://dff2h0hbfv6w4.cloudfront.net/ZAXSCDVF12345/top-tiles.png');
+  position: absolute;
+  height: 500px;
+  background-size: cover;
+  top: 0;
+  left: 0;
+}
+/* Copy Container */
+
+.about-desktop-container .about-content {
+  height: 100%;
+  background: #323232;
+  width: 100%;
+  margin-top: 374px;
+  position: relative;
+  padding: 0 60px;
+}
+/* Copy Container - main heading */
+
+.about-desktop-container .about-content .main-heading {
+  color: white;
+  font-size: 60px;
+  font-weight: 100;
+  text-align: left;
+  text-transform: uppercase;
+  padding-top: 55px;
+  margin: 0;
+}
+/* Copy Container - sub heading */
+
+.about-desktop-container .about-content .sub-heading {
+  color: rgb(189, 184, 184);
+  text-align: left;
+  padding-top: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+/* Copy Container - sub main headings */
+
+.about-desktop-container .about-content .sub-main-heading {
+  color: white;
+  font-size: 35px;
+  font-weight: 100;
+  margin: 0;
+}
+/* About Paragraphs */
+
+.about-desktop-container .about-content .small-border-bottom {
+  width: 40px;
+  height: 2px;
+  background: rgb(250, 119, 120);
+}
+
+.about-desktop-container .about-content p.about-paragraphs {
+  color: rgb(189, 184, 184);
+  padding-top: 50px;
+  font-size: 15px;
+  line-height: 2em;
+  letter-spacing: 0.1em;
+  padding-bottom: 50px;
+}
+
+.about-desktop-container .about-content p.about-paragraphs.no-padding-bottom {
+  padding-bottom: 0;
+}
+
+.about-desktop-container .about-content p.about-paragraphs.no-padding-top {
+  padding-top: 0;
+}
+
+.about-desktop-container .about-content p.about-paragraphs.half-width {
+  width: 50%;
+  display: inline-block;
+}
+/* Animation Canvases */
+
+.stroller-animation-canvas {
+  position: absolute;
+  width: 400px;
+  top: 48px;
+  right: 25px;
+  height: 250px;
+}
+
+.stroller-animation-canvas .stroller-body {
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+.stroller-animation-canvas .stroller-wheel {
+  position: absolute;
+  margin: auto;
+  bottom: 0;
+  -webkit-animation: rotating 2s linear infinite;
+  -moz-animation: rotating 2s linear infinite;
+  -ms-animation: rotating 2s linear infinite;
+  -o-animation: rotating 2s linear infinite;
+  animation: rotating 2s linear infinite;
+}
+
+.stroller-animation-canvas .stroller-wheel.one {
+  left: 0;
+  right: 84px;
+  top: 156px;
+}
+
+.stroller-animation-canvas .stroller-wheel.two {
+  right: 0;
+  left: 235px;
+  top: 156px;
+}
+/* Map animation canvas*/
+
+.map-animation-canvas {
+  position: absolute;
+  width: 400px;
+  top: 48px;
+  right: -5px;
+  height: 350px;
+}
+
+.map-animation-canvas .map {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  margin: auto;
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  -ms-perspective: 1000px;
+  -o-perspective: 1000px;
+  perspective: 1000px;
+  -webkit-transform: rotateX(25deg);
+  -moz-transform: rotateX(25deg);
+  -ms-transform: rotateX(25deg);
+  -o-transform: rotateX(25deg);
+  transform: rotateX(25deg);
+}
+
+.map-animation-canvas .canada {
+  width: 15px;
+  height: 15px;
+  background: rgb(30, 131, 143);
+  border-radius: 100%;
+  border: 5px solid rgba(30, 131, 143, 0.1);
+  background-clip: padding-box;
+  position: absolute;
+  bottom: 200px;
+  right: 90px;
+}
+
+.map-animation-canvas .california {
+  width: 15px;
+  height: 15px;
+  background: rgb(251, 118, 119);
+  border-radius: 100%;
+  border: 5px solid rgba(251, 118, 119, 0.1);
+  background-clip: padding-box;
+  position: absolute;
+  bottom: 88px;
+  left: 30px;
+}
+
+.map-animation-canvas .flight-path-container {
+  position: absolute;
+  height: 300px;
+  right: 89px;
+  overflow: hidden;
+  width:0;
+  -webkit-transition:2s;
+  opacity:1;
+}
+.map-animation-canvas .flight-path-container.add-width {
+	width:300px;
+}
+.map-animation-canvas .flight-path-container.hide-line {
+	opacity:0;
+}
+.map-animation-canvas .flight-path-container .flight-path {
+  position: absolute;
+  width: 284px;
+  height: 1px;
+  background: rgb(251, 118, 119);
+  background: -moz-linear-gradient(left, rgba(251, 118, 119, 1) 0%, rgba(30, 131, 143, 1) 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(251, 118, 119, 1)), color-stop(100%, rgba(30, 131, 143, 1)));
+  background: -webkit-linear-gradient(left, rgba(251, 118, 119, 1) 0%, rgba(30, 131, 143, 1) 100%);
+  background: -o-linear-gradient(left, rgba(251, 118, 119, 1) 0%, rgba(30, 131, 143, 1) 100%);
+  background: -ms-linear-gradient(left, rgba(251, 118, 119, 1) 0%, rgba(30, 131, 143, 1) 100%);
+  background: linear-gradient(to right, rgba(251, 118, 119, 1) 0%, rgba(30, 131, 143, 1) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#fb7677', endColorstr='#1e838f', GradientType=1);
+  bottom: 183px;
+  right: -1px;
+  -webkit-transform: rotate(-23deg);
+  -moz-transform: rotate(-23deg);
+  -ms-transform: rotate(-23deg);
+  -o-transform: rotate(-23deg);
+  transform: rotate(-23deg);
+  top: 96px;
+  bottom: 0;
+  margin: auto;
+}
+
+.map-animation-canvas .flight-path-container .plane {
+  position: absolute;
+  right: 0px;
+  top: 133px;
+  -webkit-transform:rotate(-113deg);	
+  font-size: 18px;
+  -webkit-transition:4s;
+  color: rgb(30, 131, 143);
+  z-index:1;
+  opacity:1;
+}
+.map-animation-canvas .flight-path-container .plane.move-plane {
+	color: rgb(251, 118, 119);
+	-webkit-transform: translate(-267px, 112px) rotate(-113deg);
+}
+.map-animation-canvas .flight-path-container .plane.hide-plane {
+	opacity:0;
+}
