@@ -15,10 +15,6 @@ app.controller('HomeController', [
 
 
     // Init
-    if($stateParams.goTo) {
-      console.log('### Go to exists');
-      $state.go($stateParams.goTo)
-    }
     $scope.showLinkIcons = true;
     $scope.startHomeAnimations = function() {
       $timeout(function() {

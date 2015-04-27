@@ -155,7 +155,7 @@
   margin: auto;
   color: white;
   width: 350px;
-  opacity:0;
+  display: none;
   z-index: -1000;
   -webkit-transition: right 0.5s, opacity 0.5s;
   -moz-transition: right 0.5s, opacity 0.5s;
@@ -166,7 +166,7 @@
 
 .state-info-container.show-state-info-container {
   right:10%;
-  opacity:1;
+  display: block;
 }
 .state-info-container h1 {
   color: white;

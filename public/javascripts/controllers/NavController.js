@@ -33,25 +33,23 @@ app.controller('NavController', [
       $rootScope.addAllTransitions = true;
       $scope.currentPreviewState = state;
       if (state === 'home') {
-        $timeout(function() {
-          $state.go('app.v1.landing-desktop');
-        }, 400);
+        $state.go('app.v1.landing-desktop');
         $scope.previewState.heading = 'Home';
         $scope.previewState.description = 'Go back to the home page and stare at the gorgeous Milky Way.';
       }
       if (state === 'about') {
         $rootScope.$emit('hide home');
-        $timeout(function() {
-          $state.go('app.v1.landing-desktop', {goTo: 'app.v1.about-desktop'});
-        }, 400);
+        $state.go('app.v1.landing-desktop', {
+          goTo: 'app.v1.about-desktop'
+        });
         $scope.previewState.heading = 'About Me';
         $scope.previewState.description = "Read all about me. Have a look at where I came from, and the things that I have experienced.";
       }
       if (state === 'work') {
         $rootScope.$emit('hide home');
-        $timeout(function() {
-          $state.go('app.v1.landing-desktop', {goTo: 'app.v1.work-desktop'});
-        }, 400);
+        $state.go('app.v1.landing-desktop', {
+          goTo: 'app.v1.work-desktop'
+        });
         $scope.previewState.heading = 'My Work';
         $scope.previewState.description = 'Have a look at my professional work, and my personal projects. Sit back and watch videos, that will take you through each individual project.';
       }
@@ -60,6 +58,7 @@ app.controller('NavController', [
       if (!$scope.hideSideNav) {
         $scope.currentPreviewState = '';
         $scope.previewState = {};
+        $scope.showPreviewState = false;
         $rootScope.addAllTransitions = false;
       }
     };
@@ -70,9 +69,10 @@ app.controller('NavController', [
 
     $scope.goToView = function(view) {
       $scope.previewState = {};
+      $scope.showPreviewState = false;
       $scope.hideSideNav = true;
       $timeout(function() {
-        if(view !== 'app.v1.landing-desktop') {
+        if (view !== 'app.v1.landing-desktop') {
           $rootScope.$emit('hide home');
         } else {
           $state.go('app.v1.landing-desktop');
