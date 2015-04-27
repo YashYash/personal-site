@@ -95,8 +95,21 @@ app.controller('RootController', [
           }, 2000);
         }, 400);
       }, 300);
-    }
+    };
+
     // UI responders
- 
+    $scope.toggleNav = function() {
+      console.log('#### Length of elements');
+      if ($scope.visibleNav) {
+        // $state.go('app.v1.work-desktop');
+        $rootScope.addAllTransitions = true;
+        $scope.visibleNav = false;
+        $timeout(function() {
+          $rootScope.addAllTransitions = false;
+        }, 1000);
+      } else {
+        $scope.visibleNav = true;
+      }
+    }
   }
 ]);

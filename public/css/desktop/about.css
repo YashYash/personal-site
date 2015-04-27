@@ -14,8 +14,13 @@
 .about-desktop-container::-webkit-scrollbar {
   display: none;
 }
-
 .about-desktop-container::-moz-scrollbar {
+  display: none;
+}
+.about-desktop-container::-ms-scrollbar {
+  display: none;
+}
+.about-desktop-container::-o-scrollbar {
   display: none;
 }
 /* Tiles image up top */
@@ -229,9 +234,17 @@
   position: absolute;
   right: 0px;
   top: 133px;
-  -webkit-transform:rotate(-113deg);	
   font-size: 18px;
+  -webkit-transform:rotate(-113deg);
+  -moz-transform:rotate(-113deg);
+  -ms-transform:rotate(-113deg);  
+  -o-transform:rotate(-113deg);  
+  transform:rotate(-113deg);  
   -webkit-transition:4s;
+  -moz-transition:4s;
+  -ms-transition:4s;
+  -o-transition:4s;
+  transition:4s;
   color: rgb(30, 131, 143);
   z-index:1;
   opacity:1;

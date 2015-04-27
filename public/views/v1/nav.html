@@ -1,7 +1,30 @@
-<div class="hamburger" ng-click="toggleNav()">
-	<div class="one bars" ng-class="{'active': (navVisible)}"></div>
-	<div class="two bars" ng-class="{'active': (navVisible)}"></div>
-	<div class="three bars" ng-class="{'active': (navVisible)}"></div>
+<div class="hamburger-container all-transitions-long" ng-class="{'landing': (stateLanding), 'active': (visibleNav)}">
+  <div class="hamburger" ng-click="toggleNav()" ng-class="{'active': (navHover || visibleNav)}" ng-mouseenter="hoverEffect()" ng-mouseleave="hoverOffEffect()">
+    <div class="bars-container">
+      <div class="one bars"></div>
+      <div class="two bars"></div>
+      <div class="three bars"></div>
+    </div>
+  </div>
 </div>
-
-
+<div class="right-side-nav" ng-class="{'show-right-side-nav': (visibleNav && !hideSideNav)}">
+	<div class="circle" ng-mouseenter="setPreviewState('home')" ng-mouseleave="removePreviewState()" ng-class="{'active': (currentPreviewState === 'home')}" ng-click="goToView('app.v1.landing-desktop')">
+		<div>Home</div>
+	</div>
+	<div class="line"></div>
+	<div class="circle" ng-mouseenter="setPreviewState('about')" ng-mouseleave="removePreviewState()" ng-class="{'active': (currentPreviewState === 'about')}" ng-click="goToView('app.v1.about-desktop')">
+		<div>About</div>
+	</div>
+	<div class="line"></div>
+	<div class="circle" ng-mouseenter="setPreviewState('work')" ng-mouseleave="removePreviewState()" ng-class="{'active': (currentPreviewState === 'work')}" ng-click="goToView('app.v1.work-desktop')">
+		<div>Work</div>
+	</div>
+	<div class="line"></div>
+	<div class="circle" ng-mouseenter="setPreviewState('entertainment')" ng-mouseleave="removePreviewState()" ng-class="{'active': (currentPreviewState === 'entertainment')}" ng-click="goToView('app.v1.entertainment-desktop')">
+		<div>Entertainment</div>
+	</div>	
+</div>
+<div class="state-info-container" ng-class="{'show-state-info-container': previewState}">
+	<h1>{{previewState.heading}}</h1>
+	<p>{{previewState.description}}</p>
+</div>

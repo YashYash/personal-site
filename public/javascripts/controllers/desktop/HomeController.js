@@ -3,16 +3,23 @@ app.controller('HomeController', [
   '$rootScope',
   '$timeout',
   '$state',
+  '$stateParams',
   function(
     $scope,
     $rootScope,
     $timeout,
-    $state) {
+    $state,
+    $stateParams) {
     'use strict';
     console.log('#### Home Controller');
 
 
     // Init
+    if($stateParams.goTo) {
+      console.log('### Go to exists');
+      $state.go($stateParams.goTo)
+    }
+    $scope.showLinkIcons = true;
     $scope.startHomeAnimations = function() {
       $timeout(function() {
         $scope.showName = true;
@@ -82,6 +89,7 @@ app.controller('HomeController', [
         $timeout(function() {
           $scope.currentHeading = '';
           $scope.currentSubHeading = '';
+          $state.go('app.v1.landing-desktop');
         }, 500);
       } else {
         $scope.showCurrentPage = true;
@@ -110,10 +118,13 @@ app.controller('HomeController', [
     };
 
     $scope.goToView = function(view) {
-      $scope.fadeOutHomePage = true;
+      $scope.showLinkIcons = false;
       $timeout(function() {
-        $scope.hideHomePage = true;
-      }, 1500);
+        $scope.fadeOutHomePage = true;
+        $timeout(function() {
+          $scope.hideHomePage = true;
+        }, 1500);
+      }, 500);
     };
 
     $scope.showHomePage = function() {
@@ -135,9 +146,13 @@ app.controller('HomeController', [
     $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
       $timeout(function() {
         if ($state.current.name === "app.v1.landing-desktop") {
+          $scope.showLinkIcons = true;
           $scope.showHomePage();
         }
       }, 500);
+    });
+    $rootScope.$on('hide home', function() {
+      $scope.goToView();
     });
   }
 ])

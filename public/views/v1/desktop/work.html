@@ -1,1 +1,203 @@
-<h1>Desktop work</h1>
+<div class="work-desktop-container">
+  <div class="slant-container">
+    <div class="slant" style="background: url('{{currentBackground}}')">
+      <div></div>
+    </div>
+    <div class="work-tab-navigator" ng-class="{'show-work-navigator':(showWorkNavigator)}">
+      <div class="circle" ng-class="{'active':(workTab === 'tech')}" ng-click="setWorkTab('tech')"></div>
+      <div class="line"></div>
+      <div class="circle" ng-class="{'active':(workTab === 'design')}" ng-click="setWorkTab('design')"></div>
+      <div class="line"></div>
+      <div class="circle" ng-class="{'active':(workTab === 'business')}" ng-click="setWorkTab('business')"></div>
+      <div class="line"></div>
+      <div class="shift-content-back" ng-click="setWorkTab('none')">
+        <span class="icon-cross-1"></span>
+      </div>
+    </div>
+    <div class="slant-content" ng-class="{'shift-left': (shiftLeft)}">
+      <h1 class="work-heading">My Work</h1>
+      <div class="work-banner-tabs one" ng-click="setWorkTab('tech')">Tech</div>
+      <div class="work-banner-tabs two" ng-click="setWorkTab('design')">Design</div>
+      <div class="work-banner-tabs three" ng-click="setWorkTab('business')">Business</div>
+    </div>
+  </div>
+  <div class="work-desktop-content">
+    <h1 class="projects-heading">Projects</h1>
+    <div class="heading-sub-heading-line-between work-background-gradient "></div>
+    <p class="projects-sub-heading">
+      <span class="personal">Personal</span>
+      <span>&</span>
+      <span class="professional">Professional</span>
+    </p>
+    <div class="timeline-mini-line work-background-gradient"></div>
+    <div class="timeline-line work-background-gradient-vertical medium"></div>
+    <div class="timeline-mini-line work-background-gradient"></div>
+    <p class="timeline-time">{{today | moment: 'D/MM/YY'}}</p>
+    <div class="timeline-mini-line work-background-gradient"></div>
+    <div class="timeline-line work-background-gradient-vertical short"></div>
+    <div class="timeline-mini-line work-background-gradient"></div>
+    <h1 class="timeline-heading professional">Stanza Redesign</h1>
+    <p class="timeline-sub-heading">Recently at work, we rebranded from SpotOn to Stanza. Along with the new name, came the new logo and a completely new design. I had to build our new site from scratch by creating a brand new angular app. Check out the desktop and mobile views below</p>
+    <div class="heading-sub-heading-line-between work-background-gradient "></div>
+    <ul class="timeline-desktop-mobile-icons">
+      <li class="icon-laptop professional" ng-class="{'active': (stanzaVideoState === 'desktop')}" ng-click="showStanzaVideoDesktopState()"></li>
+      <li class="icon-phone-2 professional" ng-class="{'active': (stanzaVideoState === 'mobile')}" ng-click="showStanzaVideoMobileState()"></li>
+      <span>+</span>
+    </ul>
+    <div class="timeline-device-desktop stanza-video-desktop" ng-click="playStanzaDesktopVideo()" ng-class="{'show-stanza-video-desktop': (stanzaVideoDesktopStateDisplay), 'fadein-stanza-video-desktop': (stanzaVideoDesktopState)}">
+      <div class="video-overlay professional" ng-class="{'show-video-overlay': (showStanzaVideoOverlay)}">
+        <span class="icon-play"></span>
+      </div>
+      <video width="700px" id="stanzaVideoDesktop" src="http://dff2h0hbfv6w4.cloudfront.net/ZAXSCDVF12345/stanza-homepage.mov" preload="auto"></video>
+    </div>
+    <div class="timeline-device-mobile stanza-video-mobile" ng-class="{'show-stanza-video-mobile': (stanzaVideoMobileStateDisplay), 'fadein-stanza-video-mobile': (stanzaVideoMobileState)}" ng-click="playStanzaMobileVideo()">
+      <div class="mobile-container">
+        <div class="mobile-device-overlay professional" ng-class="{'show-mobile-device-overlay': (showStanzaVideoOverlayMobile)}">
+          <span class="icon-play"></span>
+        </div>
+        <video width="250px" height="392px" id="stanzaVideoMobile" src="http://dff2h0hbfv6w4.cloudfront.net/ZAXSCDVF12345/stanza-mobile.mov" preload="auto"></video>
+      </div>
+    </div>
+    <div class="timeline-mini-line work-background-gradient"></div>
+    <div class="timeline-line work-background-gradient-vertical medium"></div>
+    <div class="timeline-mini-line work-background-gradient"></div>
+    <p class="timeline-time">13/03/15</p>
+    <div class="timeline-mini-line work-background-gradient"></div>
+    <div class="timeline-line work-background-gradient-vertical short"></div>
+    <div class="timeline-mini-line work-background-gradient"></div>
+    <h1 class="timeline-heading personal">App in development</h1>
+    <p class="timeline-sub-heading">This is an app that is currently in development. We are almost done the beta version. Check it out below. I designed and built the beta version.</p>
+    <div class="heading-sub-heading-line-between work-background-gradient "></div>
+    <ul class="timeline-desktop-mobile-icons">
+      <li style="display:none"></li>
+      <li class="icon-phone-2 personal" ng-class="{'active': (stanzaVideoState === 'mobile')}" ng-click="showStanzaVideoMobileState()"></li>
+    </ul>
+    <div class="timeline-device-mobile" ng-click="playPuffMobileVideo()">
+      <div class="mobile-container puff">
+        <div class="mobile-device-overlay personal" ng-class="{'show-mobile-device-overlay': (showPuffVideoOverlayMobile)}">
+          <span class="icon-play"></span>
+        </div>
+        <video width="250px" height="392px" id="puffVideoMobile" src="http://dff2h0hbfv6w4.cloudfront.net/ZAXSCDVF12345/puff-video.mov" preload="auto"></video>
+      </div>
+    </div>
+    <div class="timeline-mini-line work-background-gradient"></div>
+    <div class="timeline-line work-background-gradient-vertical medium"></div>
+    <div class="timeline-mini-line work-background-gradient"></div>
+    <p class="timeline-time">01/03/2015</p>
+    <div class="timeline-mini-line work-background-gradient"></div>
+    <div class="timeline-line work-background-gradient-vertical short"></div>
+    <div class="timeline-mini-line work-background-gradient"></div>
+    <h1 class="timeline-heading professional">Version 1 of Ikeda's website</h1>
+    <p class="timeline-sub-heading">Ikeda is releasing his debut album soon. This is version 1 of the site. It will be live, once the album is out. The final website won't be exactly like this one. I got to design and build this site.</p>
+    <div class="heading-sub-heading-line-between work-background-gradient "></div>
+    <ul class="timeline-desktop-mobile-icons">
+      <li class="icon-laptop professional" ng-class="{'active': (ikedaVideoState === 'desktop')}" ng-click="showIkedaVideoDesktopState()"></li>
+      <li class="icon-phone-2 professional" ng-class="{'active': (ikedaVideoState === 'mobile')}" ng-click="showIkedaVideoMobileState()"></li>
+      <span>+</span>
+    </ul>
+    <div class="timeline-device-desktop ikeda-video-desktop" ng-click="playIkedaDesktopVideo()" ng-class="{'show-ikeda-video-desktop': (ikedaVideoDesktopStateDisplay), 'fadein-ikeda-video-desktop': (ikedaVideoDesktopState)}">
+      <div class="video-overlay professional" ng-class="{'show-video-overlay': (showIkedaVideoOverlay)}">
+        <span class="icon-play"></span>
+      </div>
+      <video width="700px" id="ikedaVideoDesktop" src="http://dff2h0hbfv6w4.cloudfront.net/ZAXSCDVF12345/ikeda-desktop.mov" preload="auto"></video>
+    </div>
+    <div class="timeline-device-mobile ikeda-video-mobile" ng-class="{'show-ikeda-video-mobile': (ikedaVideoMobileStateDisplay), 'fadein-ikeda-video-mobile': (ikedaVideoMobileState)}" ng-click="playIkedaMobileVideo()">
+      <div class="mobile-container">
+        <div class="mobile-device-overlay professional" ng-class="{'show-mobile-device-overlay': (showIkedaVideoOverlayMobile)}">
+          <span class="icon-play"></span>
+        </div>
+        <video width="250px" height="392px" id="ikedaVideoMobile" src="http://dff2h0hbfv6w4.cloudfront.net/ZAXSCDVF12345/ikeda-mobile.mov" preload="auto"></video>
+      </div>
+    </div>
+    <div class="timeline-mini-line work-background-gradient"></div>
+    <div class="timeline-line work-background-gradient-vertical medium"></div>
+    <div class="timeline-mini-line work-background-gradient"></div>
+    <p class="timeline-time">20/02/2015</p>
+    <div class="timeline-mini-line work-background-gradient"></div>
+    <div class="timeline-line work-background-gradient-vertical short"></div>
+    <div class="timeline-mini-line work-background-gradient"></div>
+    <h1 class="timeline-heading professional">Stanza's new button popup</h1>
+    <p class="timeline-sub-heading">Our 'Add-to-calendar' button is responsible for all our growth. So we decided to give it a redesign. The popup open up once the 'Add-to-calendar' button is clicked on any one of our clients' sites. Check out the mobile and destop version below.</p>
+    <div class="heading-sub-heading-line-between work-background-gradient "></div>
+    <ul class="timeline-desktop-mobile-icons">
+      <li class="icon-laptop professional" ng-class="{'active': (buttonVideoState === 'desktop')}" ng-click="showButtonVideoDesktopState()"></li>
+      <li class="icon-phone-2 professional" ng-class="{'active': (buttonVideoState === 'mobile')}" ng-click="showButtonVideoMobileState()"></li>
+      <span>+</span>
+    </ul>
+    <div class="timeline-device-desktop button-video-desktop" ng-click="playButtonDesktopVideo()" ng-class="{'show-button-video-desktop': (buttonVideoDesktopStateDisplay), 'fadein-button-video-desktop': (buttonVideoDesktopState)}">
+      <div class="video-overlay professional" ng-class="{'show-video-overlay': (showButtonVideoOverlay)}">
+        <span class="icon-play"></span>
+      </div>
+      <video width="400px" id="buttonVideoDesktop" src="http://dff2h0hbfv6w4.cloudfront.net/ZAXSCDVF12345/stanza-button-desktop.mov" preload="auto"></video>
+    </div>
+    <div class="timeline-device-mobile button-video-mobile" ng-class="{'show-button-video-mobile': (buttonVideoMobileStateDisplay), 'fadein-button-video-mobile': (buttonVideoMobileState)}" ng-click="playButtonMobileVideo()">
+      <div class="mobile-container button-mobile">
+        <div class="mobile-device-overlay professional" ng-class="{'show-mobile-device-overlay': (showButtonVideoOverlayMobile)}">
+          <span class="icon-play"></span>
+        </div>
+        <video width="250px" height="392px" id="buttonVideoMobile" src="http://dff2h0hbfv6w4.cloudfront.net/ZAXSCDVF12345/stanza-button-mobile.mov" preload="auto"></video>
+      </div>
+    </div>
+
+    <div class="timeline-mini-line work-background-gradient"></div>
+    <div class="timeline-line work-background-gradient-vertical medium"></div>
+    <div class="timeline-mini-line work-background-gradient"></div>
+    <p class="timeline-time">10/01/2015</p>
+    <div class="timeline-mini-line work-background-gradient"></div>
+    <div class="timeline-line work-background-gradient-vertical short"></div>
+    <div class="timeline-mini-line work-background-gradient"></div>
+    <h1 class="timeline-heading professional">Stanza's Timeline</h1>
+    <p class="timeline-sub-heading">We created a timeline that would represent our SEO page. Therefore when we release our timeline, if you google 'Stanford Stanza', the first result will take you to our timeline. The timeline allows you to add events to your list, which you can download to your personal calendar. It also allows you to download individual events. This timeline is embeddalble, meaning that our clients can embed this as an iframe on their sites. I got to build the entire front end and a huge portion of the backend as well.</p>
+    <div class="heading-sub-heading-line-between work-background-gradient "></div>
+    <ul class="timeline-desktop-mobile-icons">
+      <li class="icon-laptop professional" ng-class="{'active': (stimelineVideoState === 'desktop')}" ng-click="showStimelineVideoDesktopState()"></li>
+      <li class="icon-phone-2 professional" ng-class="{'active': (stimelineVideoState === 'mobile')}" ng-click="showStimelineVideoMobileState()"></li>
+      <span>+</span>
+    </ul>
+    <div class="timeline-device-desktop stimeline-video-desktop" ng-click="playStimelineDesktopVideo()" ng-class="{'show-stimeline-video-desktop': (stimelineVideoDesktopStateDisplay), 'fadein-stimeline-video-desktop': (stimelineVideoDesktopState)}">
+      <div class="video-overlay professional" ng-class="{'show-video-overlay': (showStimelineVideoOverlay)}">
+        <span class="icon-play"></span>
+      </div>
+      <video width="700px" id="stimelineVideoDesktop" src="http://dff2h0hbfv6w4.cloudfront.net/ZAXSCDVF12345/stanza-timeline-desktop.mov" preload="auto"></video>
+    </div>
+    <div class="timeline-device-mobile stimeline-video-mobile" ng-class="{'show-stimeline-video-mobile': (stimelineVideoMobileStateDisplay), 'fadein-stimeline-video-mobile': (stimelineVideoMobileState)}" ng-click="playStimelineMobileVideo()">
+      <div class="mobile-container stimeline-mobile">
+        <div class="mobile-device-overlay professional" ng-class="{'show-mobile-device-overlay': (showStimelineVideoOverlayMobile)}">
+          <span class="icon-play"></span>
+        </div>
+        <video width="250px" height="392px" id="stimelineVideoMobile" src="http://dff2h0hbfv6w4.cloudfront.net/ZAXSCDVF12345/stanza-timeline-mobile.mov" preload="auto"></video>
+      </div>
+    </div> 
+
+    <div class="timeline-mini-line work-background-gradient"></div>
+    <div class="timeline-line work-background-gradient-vertical medium"></div>
+    <div class="timeline-mini-line work-background-gradient"></div>
+    <p class="timeline-time">04/12/2014</p>
+    <div class="timeline-mini-line work-background-gradient"></div>
+    <div class="timeline-line work-background-gradient-vertical short"></div>
+    <div class="timeline-mini-line work-background-gradient"></div>
+    <h1 class="timeline-heading personal">PinPoint.zone</h1>
+    <p class="timeline-sub-heading">This is an app that I started building at the end of last year. I have not had a chance to deploy to the app or play store yet. It's an app that scrapes ads off of Kijiji and Craigslist. It gets each individual ads location, and shows the user who is selling what around them. At the same time, it allows users to create their own ads. Everytime a user creates an ad, it automitically attaches the user's location to it. Therefore if you are at a particular location, looking to buy an iphone, it will show you people around you who have an iphone for sale, and it allows you to directly message them through the app. For the desktop version, I build a real-time dashboard, that I use to run my scrapers on different webpages. This is version 1 of the app. I have not integrated the chat feature to completion yet. I am not done designing it yet either.</p>
+    <div class="heading-sub-heading-line-between work-background-gradient "></div>
+    <ul class="timeline-desktop-mobile-icons">
+      <li class="icon-laptop personal" ng-class="{'active': (pinpointVideoState === 'desktop')}" ng-click="showPinpointVideoDesktopState()"></li>
+      <li class="icon-phone-2 personal" ng-class="{'active': (pinpointVideoState === 'mobile')}" ng-click="showPinpointVideoMobileState()"></li>
+      <span>+</span>
+    </ul>
+    <div class="timeline-device-desktop pinpoint-video-desktop" ng-click="playPinpointDesktopVideo()" ng-class="{'show-pinpoint-video-desktop': (pinpointVideoDesktopStateDisplay), 'fadein-pinpoint-video-desktop': (pinpointVideoDesktopState)}">
+      <div class="video-overlay professional" ng-class="{'show-video-overlay': (showPinpointVideoOverlay)}">
+        <span class="icon-play"></span>
+      </div>
+      <video width="700px" id="pinpointVideoDesktop" src="http://dff2h0hbfv6w4.cloudfront.net/ZAXSCDVF12345/pinpoint-desktop.mov" preload="auto"></video>
+    </div>
+    <div class="timeline-device-mobile pinpoint-video-mobile" ng-class="{'show-pinpoint-video-mobile': (pinpointVideoMobileStateDisplay), 'fadein-pinpoint-video-mobile': (pinpointVideoMobileState)}" ng-click="playPinpointMobileVideo()">
+      <div class="mobile-container pinpoint-mobile">
+        <div class="mobile-device-overlay professional" ng-class="{'show-mobile-device-overlay': (showPinpointVideoOverlayMobile)}">
+          <span class="icon-play"></span>
+        </div>
+        <video width="250px" height="392px" id="pinpointVideoMobile" src="http://dff2h0hbfv6w4.cloudfront.net/ZAXSCDVF12345/pinpoint-mobile.mov" preload="auto"></video>
+      </div>
+    </div> 
+
+  </div>
+</div>

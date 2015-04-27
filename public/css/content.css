@@ -3,16 +3,80 @@
 .global-background {
   position: fixed;
   height: 100%;
-  background: #282828;
+  background: #181818;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 0;
 }
+
+.global-background div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 3px;
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  -ms-perspective: 1000px;
+  -o-perspective: 1000px;
+  perspective: 1000px;  
+}
+
+.global-background div.slow {
+  -webkit-animation: random 70s infinite;
+  -mos-animation: random 70s infinite;
+  -ms-animation: random 70s infinite;
+  -o-animation: random 70s infinite;
+  animation: random 70s infinite;
+  opacity: 0.2;
+}
+
+.global-background div.medium {
+  -webkit-animation: random 50s infinite;
+  -mos-animation: random 50s infinite;
+  -ms-animation: random 50s infinite;
+  -o-animation: random 50s infinite;
+  animation: random 50s infinite;
+  opacity: 0.5;
+}
+
+.global-background div.fast {
+  -webkit-animation: random 25s infinite;
+  -mos-animation: random 25s infinite;
+  -ms-animation: random 25s infinite;
+  -o-animation: random 25s infinite;
+  animation: random 25s infinite;
+  opacity: 0.8
+}
+
+@-webkit-keyframes random {
+  0% {
+  -webkit-transform: scale(1, 1) translate(0,0) rotate(180deg);
+  }
+  25% {
+    -webkit-transform: scale(0.8, 0.8) translate(-60px, -60px) rotate(300deg);
+  }
+  50% {
+    -webkit-transform: scale(0.2, 0.2) translate(-120px, -120px) rotate(270deg);
+  }
+  75% {
+    -webkit-transform: scale(0.5, 0.5) translate(-100px, -100px) rotate(330deg);
+  }
+  100% {
+    -webkit-transform: scale(1, 1) translate(0, 0) rotate(0deg);
+  }
+}
 /* Content */
 
 .content-container-desktop {
-  z-index: 10;
+  z-index: 0;
   display: none;
 }
 /* Global Loader */
@@ -142,6 +206,19 @@
   height: 100%;
 }
 
+.content-container-desktop.scale-out {
+  -webkit-transform: scale(0.5, 0.5) translateX(-400px);
+  -moz-transform: scale(0.5, 0.5) translateX(-400px);
+  -ms-transform: scale(0.5, 0.5) translateX(-400px);
+  -o-transform: scale(0.5, 0.5) translateX(-400px);
+  transform: scale(0.5, 0.5) translateX(-400px);
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+
 @media(min-width:1024px) {
   #mobile-container {
     display: none;
@@ -150,6 +227,6 @@
     display: block;
   }
   .loading-desktop {
-  	display: block;
+    display: block;
   }
 }

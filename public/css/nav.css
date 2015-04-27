@@ -1,4 +1,4 @@
-.desktop-nav {
+.desktop-nav-container {
   display: none;
   z-index: 100;
   color: white;
@@ -7,40 +7,180 @@
   width: 100%;
   top: 0;
   left: 0;
+  right: 0;
+  margin: auto;
 }
 
-.desktop-nav .hamburger {
+.desktop-nav-container .hamburger-container {
+  width: 85%;
   position: absolute;
-  right: 30px;
-  top: 30px;
-  width: 50px;
-  height: 25px;
+  top: 0;
+  left: 0;
+  height: 100%;
+  opacity: 1;
+  right: 0;
+  margin: auto;
+  max-width: 1000px;
   cursor: pointer;
 }
 
-.desktop-nav .hamburger .bars {
-  width: 50%;
+.desktop-nav-container .hamburger-container.landing,
+.desktop-nav-container .hamburger-container.active {
+  width: 100%;
+  max-width: 100%;
+}
+
+.desktop-nav-container .hamburger-container .hamburger {
+  width: 55px;
+  height: 51px;
+  top: 10px;
+  right: 10px;
   position: absolute;
-  background: white;
-  border-radius: 1px;
-  height: 2px;
 }
 
-
-.desktop-nav .hamburger .bars.one {
+.desktop-nav-container .hamburger-container .hamburger .bars-container {
+  position: absolute;
   top: 0;
+  left: 0;
+  padding: 15px;
 }
 
-.desktop-nav .hamburger .bars.two {
-  top: 7px;
+.desktop-nav-container .hamburger-container .hamburger .bars {
+  height: 2px;
+  margin-bottom: 5px;
+  width: 20px;
+  border-radius: 3px;
+  background: white;
 }
 
-.desktop-nav .hamburger .bars.three {
-  top: 15px;
+.desktop-nav-container .hamburger-container .hamburger.active .bars {
+  width: 30px;
+}
+
+.desktop-nav-container .hamburger-container .hamburger .bars.one {
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.desktop-nav-container .hamburger-container .hamburger .bars.two {
+  -webkit-transition: 0.7s;
+  -moz-transition: 0.7s;
+  -ms-transition: 0.7s;
+  -o-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.desktop-nav-container .hamburger-container .hamburger .bars.three {
+  -webkit-transition: 1.2s;
+  -moz-transition: 1.2s;
+  -ms-transition: 1.2s;
+  -o-transition: 1.2s;
+  transition: 1.2s;
+}
+
+/* Right Side Nav */
+.right-side-nav {
+  position: absolute;
+  right: 0;
+  height: 500px;
+  top: 150px;
+  width: 70px;
+  text-align: center;
+  opacity:0;
+  display: none;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;    
+}
+.right-side-nav.show-right-side-nav {
+  opacity: 1;
+  display: block;
+}
+.right-side-nav .circle {
+  width:15px;
+  height:15px;
+  border: 1px solid rgba(238, 238, 238, 0.2);
+  background-clip: padding-box !important;
+  margin:auto;
+  position: relative;
+  cursor: pointer;
+  border-radius:100%;
+  background-clip:padding-box;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;  
+}
+.right-side-nav .circle.active {
+  background: rgba(238, 238, 238, 0.8);
+  border: 4px solid rgba(238, 238, 238, 0.2);
+  box-shadow: 0 0 40px white;
+}
+.right-side-nav .circle div {
+  position: absolute;
+  top:-2px;
+  width:200px;
+  text-align: right;
+  right:30px;
+  color:white;
+  font-size:14px;
+  text-transform: uppercase;
+  opacity:0.6;
+}
+.right-side-nav .circle.active div {
+  opacity:1;
+}
+.right-side-nav .line {
+  width:1px;
+  background:rgba(238, 238, 238, 0.2);
+  height:50px;
+  margin:auto;
+  position: relative;
+}
+/* State Info */
+.state-info-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 10%;
+  top: 0;
+  bottom: 0;
+  height: 50%;
+  margin: auto;
+  color: white;
+  width: 350px;
+  opacity:0;
+  z-index: -1000;
+  -webkit-transition: right 0.5s, opacity 0.5s;
+  -moz-transition: right 0.5s, opacity 0.5s;
+  -ms-transition: right 0.5s, opacity 0.5s;
+  -o-transition: right 0.5s, opacity 0.5s;
+  transition: right 0.5s, opacity 0.5s;   
+}
+
+.state-info-container.show-state-info-container {
+  right:10%;
+  opacity:1;
+}
+.state-info-container h1 {
+  color: white;
+  font-size: 45px;
+  font-weight: 200;
+}
+
+.state-info-container p {
+  font-weight: 600;
+  font-size: 14px;
 }
 
 @media(min-width:1024px) {
-  .desktop-nav {
+  .desktop-nav-container {
     display: block;
   }
 }

@@ -1,6 +1,8 @@
 <!-- v1.html - styled using - content.css -->
 <redirect-resize>
-  <div class="global-background"></div>
+  <div class="global-background" ng-controller="BackgroundController">
+    <div ng-repeat="square in squares | limitTo: 250" style="left:{{square.left}}px; top:{{square.top}}px; background-color: {{square.color}}" ng-class="{'slow': ($index < 83), 'medium': ($index < 170 &&  $index > 83), 'fast': ($index > 170)}"></div>
+  </div>
   <div class="loading-desktop all-directions-opacity-long" ng-class="{'done-loading':(doneLoading), 'hide':(doneLoadingHide)}">
     <div class="heading">
       <h1 class="all-directions-opacity-medium" ng-class="{'show-heading': (showIntroHeading)}">{{introText}}</h1>
@@ -13,11 +15,11 @@
     </div>
   </div>
     <!-- Landing Page -->
-  <div ng-include="'/views/v1/desktop/home.html'" ng-controller="HomeController" ng-class="{'hide-home-screen':(hideHomePage)}" class="home-screen-container"></div>
+  <div ng-include="'/views/v1/desktop/home.html'" ng-controller="HomeController" ng-class="{'hide-home-screen':(hideHomePage), 'scale-out': (visibleNav), 'all-transitions-long': (addAllTransitions)}" class="home-screen-container"></div>
 
   <!-- Desktop -->
-  <div ui-view="nav" class="desktop-nav"></div>
-  <div ui-view="content" class="content-container-desktop"></div>
+  <div ui-view="nav" class="desktop-nav-container"></div>
+  <div ui-view="content" class="content-container-desktop" ng-class="{'scale-out': (visibleNav), 'all-transitions-long': (addAllTransitions)}"></div>
 
   <!-- Mobile View -->
   <div id="mobile-container" ng-class="{'zoom-in':(zoomIn === 'true')}">

@@ -39,7 +39,7 @@ app.config(['$stateProvider','$urlRouterProvider',function($stateProvider, $urlR
 	  }
     })
     .state('app.v1.landing-desktop', {
-      url: '/landing',
+      url: '/landing/:goTo',
       views: {
         'content@app.v1': {
           templateUrl: '/views/v1/desktop/landing.html',
