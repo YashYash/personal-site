@@ -75,7 +75,7 @@ app.config(['$stateProvider','$urlRouterProvider',function($stateProvider, $urlR
       }
     }) 
     .state('app.v1.contact-desktop', {
-      url: '/entertainment',
+      url: '/contact',
       views: {
         'content@app.v1': {
           templateUrl: '/views/v1/desktop/contact.html',

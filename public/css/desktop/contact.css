@@ -1,0 +1,119 @@
+.contact-container {
+  position: relative;
+  width: 85%;
+  margin: auto;
+  height: 100%;
+  box-shadow: 0 0 45px;
+  overflow: scroll;
+  background: #323232;
+  max-width: 1000px;
+}
+
+.contact-container::-webkit-scrollbar {
+  display: none;
+}
+
+.contact-container .banner {
+  height: 950px;
+  width: 120%;
+  border-radius: 50%;
+  top: -482px;
+  position: relative;
+  left: -101px;
+  background: url('http://www.hdwallpapersinn.com/wp-content/uploads/2014/07/nature-wallpapers-hd-6.jpg');
+  background-size: 155% 109%;
+  background-position: 0% 0%;
+  -webkit-animation: panorama 130s infinite;
+  -ms-animation: panorama 130s infinite;
+  -o-animation: panorama 130s infinite;
+  -moz-animation: panorama 130s infinite;
+  animation: panorama 130s infinite;
+  box-shadow: 0 0 29px black;
+}
+
+.contact-container .banner > div.full-name {
+  position: absolute;
+  width: 300px;
+  height: 100px;
+  z-index: 10;
+  top: 520px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+}
+
+.contact-container .banner > div.full-name > h1 {
+  color: white;
+  font-size: 40px;
+  font-weight: 100;
+  width: 250px;
+  margin: auto;
+  border-bottom: 1px solid rgba(238, 238, 238, 0.5);
+  padding-bottom: 9px;
+}
+
+.contact-container .banner > div.full-name > p {
+  color: white;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.contact-profile-picture {
+  background: url('https://s3.amazonaws.com/spotonit/images/other/yash');
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  border: 6px solid rgba(238, 238, 238, 0.1);
+  background-clip: padding-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -100px;
+  background-size: cover !important;
+  margin: auto;
+}
+
+.clear-banner-squares {
+  width: 5px;
+  height: 5px;
+  background: rgba(238, 238, 238, 0.1);
+  -webkit-animation: random 30s infinite;
+  -mos-animation: random 30s infinite;
+  -ms-animation: random 30s infinite;
+  -o-animation: random 30s infinite;
+  animation: random 30s infinite;
+  position: absolute;
+  z-index: 11;
+}
+
+.contact-content {
+  position: relative;
+  top: -342px;
+  text-align: center;
+}
+
+.contact-content > p {
+  position: relative;
+  color: white;
+  font-size: 18px;
+  font-weight: 100;
+  padding-top:15px;
+}
+
+.contact-content > p span.pink {
+  color: rgba(43, 169, 184, 1);
+}
+
+.contact-content > p span.blue {
+  color: rgb(251, 118, 119);
+}
+
+.contact-content > .mini-line {
+  width: 50px;
+  height: 1px;
+  margin: auto;
+  margin-top: 15px;
+  opacity: 0.6;
+}

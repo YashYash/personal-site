@@ -1,0 +1,27 @@
+.entertainment-container {
+  position: relative;
+  width: 85%;
+  margin: auto;
+  height: 100%;
+  box-shadow: 0 0 45px;
+  overflow: scroll;
+  background: #323232;
+  max-width: 1000px;
+}
+
+.entertainment-container::-webkit-scrollbar {
+  display: none;
+}
+
+.entertainment-container .banner {
+  height: 950px;
+  width: 120%;
+  border-radius: 50%;
+  top: -365px;
+  position: relative;
+  left: -101px;
+  background: url('https://dff2h0hbfv6w4.cloudfront.net/ZAXSCDVF12345/work-background-three.jpg');
+  background-size: cover !important;
+  overflow: hidden;
+  box-shadow: 0 0 29px black;
+}

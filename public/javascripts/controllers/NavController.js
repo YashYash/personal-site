@@ -53,6 +53,14 @@ app.controller('NavController', [
         $scope.previewState.heading = 'My Work';
         $scope.previewState.description = 'Have a look at my professional work, and my personal projects. Sit back and watch videos, that will take you through each individual project.';
       }
+      if (state === 'contact') {
+        $rootScope.$emit('hide home');
+        $state.go('app.v1.contact-desktop', {
+          goTo: 'app.v1.contact-desktop'
+        });
+        $scope.previewState.heading = 'Contact';
+        $scope.previewState.description = 'Get my contact info';
+      }      
     };
     $scope.removePreviewState = function() {
       if (!$scope.hideSideNav) {

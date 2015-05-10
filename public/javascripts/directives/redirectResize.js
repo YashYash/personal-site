@@ -10,7 +10,7 @@ app.directive('redirectResize', function($state, $rootScope) {
         $rootScope.$broadcast('resizing window');
         if ($(window).width() > 1024) {
           console.log($state.current.name);
-          if ($state.current.name !== 'app.v1.about-desktop' && $state.current.name !== 'app.v1.work-desktop') {
+          if ($state.current.name !== 'app.v1.about-desktop' && $state.current.name !== 'app.v1.work-desktop' && $state.current.name !== 'app.v1.contact-desktop') {
             $state.go('app.v1.landing-desktop');
           }
         } else {
