@@ -44,18 +44,24 @@
       <li class="icon-phone-2 professional" ng-class="{'active': (stanzaVideoState === 'mobile')}" ng-click="showStanzaVideoMobileState()"></li>
       <span>+</span>
     </ul>
-    <div class="timeline-device-desktop stanza-video-desktop" ng-click="playStanzaDesktopVideo()" ng-class="{'show-stanza-video-desktop': (stanzaVideoDesktopStateDisplay), 'fadein-stanza-video-desktop': (stanzaVideoDesktopState)}">
-      <div class="video-overlay professional" ng-class="{'show-video-overlay': (showStanzaVideoOverlay)}">
-        <span class="icon-play"></span>
-      </div>
-      <video width="700px" id="stanzaVideoDesktop" src="https://dff2h0hbfv6w4.cloudfront.net/ZAXSCDVF12345/stanza-homepage.mov" preload="auto"></video>
-    </div>
-    <div class="timeline-device-mobile stanza-video-mobile" ng-class="{'show-stanza-video-mobile': (stanzaVideoMobileStateDisplay), 'fadein-stanza-video-mobile': (stanzaVideoMobileState)}" ng-click="playStanzaMobileVideo()">
-      <div class="mobile-container">
-        <div class="mobile-device-overlay professional" ng-class="{'show-mobile-device-overlay': (showStanzaVideoOverlayMobile)}">
-          <span class="icon-play"></span>
+    <div class="timeline-device-desktop stanza-video-desktop" ng-class="{'show-stanza-video-desktop': (stanzaVideoDesktopStateDisplay), 'fadein-stanza-video-desktop': (stanzaVideoDesktopState)}">
+      <div class="video-overlay professional" ng-class="{'show-video-overlay': (showStanzaVideoOverlay)}" style="background: url('http://dff2h0hbfv6w4.cloudfront.net/ZAXSCDVF12345/stanza_home.jpg')">
+        <div class="image-overlay">
+          <div ng-click="previewStanza('desktop')">
+            <p class="ion-share">PREVIEW APP</p>
+          </div>
         </div>
-        <video width="250px" height="392px" id="stanzaVideoMobile" src="https://dff2h0hbfv6w4.cloudfront.net/ZAXSCDVF12345/stanza-mobile.mov" preload="auto"></video>
+      </div>
+    </div>
+    <div class="timeline-device-mobile stanza-video-mobile" ng-class="{'show-stanza-video-mobile': (stanzaVideoMobileStateDisplay), 'fadein-stanza-video-mobile': (stanzaVideoMobileState)}">
+      <div class="mobile-container">
+        <div class="mobile-device-overlay professional" ng-class="{'show-mobile-device-overlay': (showStanzaVideoOverlayMobile)}" style="background: url('http://dff2h0hbfv6w4.cloudfront.net/ZAXSCDVF12345/stanza-mobile.jpg')">
+          <div class="image-overlay">
+            <div ng-click="previewStanza('mobile')">
+              <p class="ion-share">PREVIEW APP</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="timeline-mini-line work-background-gradient"></div>
@@ -125,20 +131,25 @@
       <span>+</span>
     </ul>
     <div class="timeline-device-desktop button-video-desktop" ng-click="playButtonDesktopVideo()" ng-class="{'show-button-video-desktop': (buttonVideoDesktopStateDisplay), 'fadein-button-video-desktop': (buttonVideoDesktopState)}">
-      <div class="video-overlay professional" ng-class="{'show-video-overlay': (showButtonVideoOverlay)}">
-        <span class="icon-play"></span>
+      <div class="video-overlay professional" ng-class="{'show-video-overlay': (showButtonVideoOverlay)}" style="background:url('http://dff2h0hbfv6w4.cloudfront.net/ZAXSCDVF12345/stanza-button.jpg')">
+        <div class="image-overlay">
+          <div ng-click="previewStanzaButton('desktop')">
+            <p class="ion-share">PREVIEW APP</p>
+          </div>
+        </div>
       </div>
-      <video width="400px" id="buttonVideoDesktop" src="https://dff2h0hbfv6w4.cloudfront.net/ZAXSCDVF12345/stanza-button-desktop.mov" preload="auto"></video>
     </div>
     <div class="timeline-device-mobile button-video-mobile" ng-class="{'show-button-video-mobile': (buttonVideoMobileStateDisplay), 'fadein-button-video-mobile': (buttonVideoMobileState)}" ng-click="playButtonMobileVideo()">
       <div class="mobile-container button-mobile">
-        <div class="mobile-device-overlay professional" ng-class="{'show-mobile-device-overlay': (showButtonVideoOverlayMobile)}">
-          <span class="icon-play"></span>
+        <div class="mobile-device-overlay professional" ng-class="{'show-mobile-device-overlay': (showButtonVideoOverlayMobile)}" style="background:url('http://dff2h0hbfv6w4.cloudfront.net/ZAXSCDVF12345/stanza-button-mobile.jpg')">
+          <div class="image-overlay">
+            <div ng-click="previewStanzaButton('mobile')">
+              <p class="ion-share">PREVIEW APP</p>
+            </div>
+          </div>
         </div>
-        <video width="250px" height="392px" id="buttonVideoMobile" src="https://dff2h0hbfv6w4.cloudfront.net/ZAXSCDVF12345/stanza-button-mobile.mov" preload="auto"></video>
       </div>
     </div>
-
     <div class="timeline-mini-line work-background-gradient"></div>
     <div class="timeline-line work-background-gradient-vertical medium"></div>
     <div class="timeline-mini-line work-background-gradient"></div>
@@ -155,20 +166,25 @@
       <span>+</span>
     </ul>
     <div class="timeline-device-desktop stimeline-video-desktop" ng-click="playStimelineDesktopVideo()" ng-class="{'show-stimeline-video-desktop': (stimelineVideoDesktopStateDisplay), 'fadein-stimeline-video-desktop': (stimelineVideoDesktopState)}">
-      <div class="video-overlay professional" ng-class="{'show-video-overlay': (showStimelineVideoOverlay)}">
-        <span class="icon-play"></span>
+      <div class="video-overlay professional" ng-class="{'show-video-overlay': (showStimelineVideoOverlay)}" style="background:url('http://dff2h0hbfv6w4.cloudfront.net/ZAXSCDVF12345/stanza-timeline.jpg')">
+        <div class="image-overlay">
+          <div ng-click="previewTimeline('desktop')">
+            <p class="ion-share">PREVIEW APP</p>
+          </div>
+        </div>
       </div>
-      <video width="700px" id="stimelineVideoDesktop" src="https://dff2h0hbfv6w4.cloudfront.net/ZAXSCDVF12345/stanza-timeline-desktop.mov" preload="auto"></video>
     </div>
     <div class="timeline-device-mobile stimeline-video-mobile" ng-class="{'show-stimeline-video-mobile': (stimelineVideoMobileStateDisplay), 'fadein-stimeline-video-mobile': (stimelineVideoMobileState)}" ng-click="playStimelineMobileVideo()">
       <div class="mobile-container stimeline-mobile">
-        <div class="mobile-device-overlay professional" ng-class="{'show-mobile-device-overlay': (showStimelineVideoOverlayMobile)}">
-          <span class="icon-play"></span>
+        <div class="mobile-device-overlay professional" ng-class="{'show-mobile-device-overlay': (showStimelineVideoOverlayMobile)}" style="background:url('http://dff2h0hbfv6w4.cloudfront.net/ZAXSCDVF12345/stanza-timeline-mobile.jpg')">
+          <div class="image-overlay">
+            <div ng-click="previewTimeline('mobile')">
+              <p class="ion-share">PREVIEW APP</p>
+            </div>
+          </div>
         </div>
-        <video width="250px" height="392px" id="stimelineVideoMobile" src="https://dff2h0hbfv6w4.cloudfront.net/ZAXSCDVF12345/stanza-timeline-mobile.mov" preload="auto"></video>
       </div>
-    </div> 
-
+    </div>
     <div class="timeline-mini-line work-background-gradient"></div>
     <div class="timeline-line work-background-gradient-vertical medium"></div>
     <div class="timeline-mini-line work-background-gradient"></div>
@@ -197,7 +213,6 @@
         </div>
         <video width="250px" height="392px" id="pinpointVideoMobile" src="https://dff2h0hbfv6w4.cloudfront.net/ZAXSCDVF12345/pinpoint-mobile.mov" preload="auto"></video>
       </div>
-    </div> 
-
+    </div>
   </div>
 </div>

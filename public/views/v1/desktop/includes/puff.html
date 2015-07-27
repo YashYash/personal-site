@@ -1,0 +1,15 @@
+<h1 class="timeline-heading personal">App in development</h1>
+<p class="timeline-sub-heading">This is an app that is currently in development. We are almost done the beta version. Check it out below. I designed and built the beta version.</p>
+<div class="heading-sub-heading-line-between work-background-gradient "></div>
+<ul class="timeline-desktop-mobile-icons">
+  <li style="display:none"></li>
+  <li class="icon-phone-2 personal" ng-class="{'active': (stanzaVideoState === 'mobile')}" ng-click="showStanzaVideoMobileState()"></li>
+</ul>
+<div class="timeline-device-mobile" ng-click="playPuffMobileVideo()">
+  <div class="mobile-container puff">
+    <div class="mobile-device-overlay personal" ng-class="{'show-mobile-device-overlay': (showPuffVideoOverlayMobile)}">
+      <span class="icon-play"></span>
+    </div>
+    <video width="250px" height="392px" id="puffVideoMobile" src="https://dff2h0hbfv6w4.cloudfront.net/ZAXSCDVF12345/puff-video.mov" preload="auto"></video>
+  </div>
+</div>

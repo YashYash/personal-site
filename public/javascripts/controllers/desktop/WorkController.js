@@ -11,17 +11,11 @@ app.controller('WorkDesktopController', [
 
     // init
     $scope.today = moment();
-    var stanzaVideoDesktop = document.getElementById("stanzaVideoDesktop");
-    var stanzaVideoMobile = document.getElementById("stanzaVideoMobile");
     var puffVideoMobile = document.getElementById("puffVideoMobile");
     var ikedaVideoDesktop = document.getElementById("ikedaVideoDesktop");
     var ikedaVideoMobile = document.getElementById("ikedaVideoMobile");
-    var buttonVideoDesktop = document.getElementById("buttonVideoDesktop");
-    var buttonVideoMobile = document.getElementById("buttonVideoMobile");
-    var stimelineVideoDesktop = document.getElementById("stimelineVideoDesktop");
-    var stimelineVideoMobile = document.getElementById("stimelineVideoMobile");
     var pinpointVideoDesktop = document.getElementById("pinpointVideoDesktop");
-    var pinpointVideoMobile = document.getElementById("pinpointVideoMobile");    
+    var pinpointVideoMobile = document.getElementById("pinpointVideoMobile");
     $scope.stanzaVideoState = 'desktop';
     $scope.ikedaVideoState = 'desktop';
     $scope.buttonVideoState = 'desktop';
@@ -41,13 +35,13 @@ app.controller('WorkDesktopController', [
     $scope.buttonVideoDesktopStateDisplay = true;
     $scope.buttonVideoDesktopState = true;
     $scope.showStimelineVideoOverlay = true;
-    $scope.showStimelineVideoOverlayMobile = true;    
+    $scope.showStimelineVideoOverlayMobile = true;
     $scope.stimelineVideoDesktopStateDisplay = true;
     $scope.stimelineVideoDesktopState = true;
     $scope.showPinpointVideoOverlay = true;
-    $scope.showPinpointVideoOverlayMobile = true;    
+    $scope.showPinpointVideoOverlayMobile = true;
     $scope.pinpointVideoDesktopStateDisplay = true;
-    $scope.pinpointVideoDesktopState = true;    
+    $scope.pinpointVideoDesktopState = true;
     // Ui-responders
     $scope.setWorkTab = function(tab) {
       $scope.workTab = tab;
@@ -95,7 +89,6 @@ app.controller('WorkDesktopController', [
         $scope.stanzaVideoDesktopState = true;
       }, 600);
       $scope.showStanzaVideoOverlayMobile = true;
-      stanzaVideoMobile.pause();
     };
     $scope.showStanzaVideoMobileState = function() {
       $scope.stanzaVideoState = 'mobile';
@@ -108,27 +101,19 @@ app.controller('WorkDesktopController', [
         $scope.stanzaVideoMobileState = true;
       }, 600);
       $scope.showStanzaVideoOverlay = true;
-      stanzaVideoDesktop.pause();
     };
-    $scope.playStanzaDesktopVideo = function() {
-      if (stanzaVideoDesktop.paused) {
-        $scope.showStanzaVideoOverlay = false;
-        stanzaVideoDesktop.play();
+    $scope.previewStanza = function(option) {
+      if (option === 'desktop') {
+        var win = window.open('http://stanza.co', '_blank');
+        win.focus();
       } else {
-        $scope.showStanzaVideoOverlay = true;
-        stanzaVideoDesktop.pause();
+        var width = 320;
+        var height = 480;
+        var left = (window.screen.width / 2) - ((width / 2) + 10);
+        var top = (window.screen.height / 2) - ((height / 2) + 50);
+        window.open('http://stanza.co', '', "status=no,height=" + height + ",width=" + width + ",resizable=no,left=" + left + ",top=" + top + ",screenX=" + left + ",screenY=" + top + ",toolbar=no,menubar=no,scrollbars=no,location=no,directories=no");
       }
-    };
-    $scope.playStanzaMobileVideo = function() {
-      if (stanzaVideoMobile.paused) {
-        $scope.showStanzaVideoOverlayMobile = false;
-        stanzaVideoMobile.play();
-      } else {
-        $scope.showStanzaVideoOverlayMobile = true;
-        stanzaVideoMobile.pause();
-      }
-    };
-
+    }
 
     // Puff
     $scope.playPuffMobileVideo = function() {
@@ -201,7 +186,6 @@ app.controller('WorkDesktopController', [
         $scope.buttonVideoDesktopState = true;
       }, 600);
       $scope.showButtonVideoOverlayMobile = true;
-      buttonVideoMobile.pause();
     };
     $scope.showButtonVideoMobileState = function() {
       $scope.buttonVideoState = 'mobile';
@@ -214,27 +198,20 @@ app.controller('WorkDesktopController', [
         $scope.buttonVideoMobileState = true;
       }, 600);
       $scope.showButtonVideoOverlay = true;
-      buttonVideoDesktop.pause();
     };
-    $scope.playButtonDesktopVideo = function() {
-      if (buttonVideoDesktop.paused) {
-        $scope.showButtonVideoOverlay = false;
-        buttonVideoDesktop.play();
+    $scope.previewStanzaButton = function(option) {
+      var width, height, left, top;
+      if (option === 'desktop') {
+        width = 750;
+        height = 750;
       } else {
-        $scope.showButtonVideoOverlay = true;
-        buttonVideoDesktop.pause();
+        width = 320;
+        height = 480;
       }
+      left = (window.screen.width / 2) - ((width / 2) + 10);
+      top = (window.screen.height / 2) - ((height / 2) + 50);
+      window.open('https://stanza.co/button/launch?calendar=https%3A%2F%2Fspoton.it%2Fschedules%2Fstanford#/all-1', '', "status=no,height=" + height + ",width=" + width + ",resizable=no,left=" + left + ",top=" + top + ",screenX=" + left + ",screenY=" + top + ",toolbar=no,menubar=no,scrollbars=no,location=no,directories=no");
     };
-    $scope.playButtonMobileVideo = function() {
-      if (buttonVideoMobile.paused) {
-        $scope.showButtonVideoOverlayMobile = false;
-        buttonVideoMobile.play();
-      } else {
-        $scope.showButtonVideoOverlayMobile = true;
-        buttonVideoMobile.pause();
-      }
-    };
-
     // Stanza timeline
     $scope.showStimelineVideoDesktopState = function() {
       $scope.stimelineVideoState = 'desktop';
@@ -263,26 +240,19 @@ app.controller('WorkDesktopController', [
       $scope.showStimelineVideoOverlay = true;
       stimelineVideoDesktop.pause();
     };
-    $scope.playStimelineDesktopVideo = function() {
-      if (stimelineVideoDesktop.paused) {
-        $scope.showStimelineVideoOverlay = false;
-        stimelineVideoDesktop.play();
-      } else {
-        $scope.showStimelineVideoOverlay = true;
-        stimelineVideoDesktop.pause();
+    $scope.previewTimeline = function(option) {
+        if (option === 'desktop') {
+          var win = window.open('https://stanza.co/timeline/stanford', '_blank');
+          win.focus();
+        } else {
+          var width = 320;
+          var height = 480;
+          var left = (window.screen.width / 2) - ((width / 2) + 10);
+          var top = (window.screen.height / 2) - ((height / 2) + 50);
+          window.open('https://stanza.co/timeline/stanford?mobile=true', '', "status=no,height=" + height + ",width=" + width + ",resizable=no,left=" + left + ",top=" + top + ",screenX=" + left + ",screenY=" + top + ",toolbar=no,menubar=no,scrollbars=no,location=no,directories=no");
+        }
       }
-    };
-    $scope.playStimelineMobileVideo = function() {
-      if (stimelineVideoMobile.paused) {
-        $scope.showStimelineVideoOverlayMobile = false;
-        stimelineVideoMobile.play();
-      } else {
-        $scope.showStimelineVideoOverlayMobile = true;
-        stimelineVideoMobile.pause();
-      }
-    };
-
-    // Pinpoint
+      // Pinpoint
     $scope.showPinpointVideoDesktopState = function() {
       $scope.pinpointVideoState = 'desktop';
       $scope.pinpointVideoMobileState = false;
@@ -327,6 +297,6 @@ app.controller('WorkDesktopController', [
         $scope.showPinpointVideoOverlayMobile = true;
         pinpointVideoMobile.pause();
       }
-    };    
+    };
   }
 ]);
