@@ -96,7 +96,7 @@ if (!process.env.NODE_ENV) {
   console.log('Server listening to port ' + 3000);
   console.log('Using dev database - "base-dev"')
   appserver.listen(process.env.PORT || 3000);
-  mongoose.connect('mongodb://pinpoint-founder:kobefederer1qaz@ds049170.mongolab.com:49170/pinpoint');
+  // mongoose.connect('mongodb://pinpoint-founder:kobefederer1qaz@ds049170.mongolab.com:49170/pinpoint');
   // mongoose.connect('mongodb://localhost:27017/base-dev');
   app.use(function(err, req, res, next) {
     res.status(err.status || 500);
@@ -114,7 +114,7 @@ if (process.env.NODE_ENV === 'production') {
   var port = process.env.PORT || 3000;
   appserver.listen(port);
   console.log('Server listening to port ' + port);
-  mongoose.connect('mongodb://pinpoint-founder:kobefederer1qaz@ds049170.mongolab.com:49170/pinpoint');
+  // mongoose.connect('mongodb://pinpoint-founder:kobefederer1qaz@ds049170.mongolab.com:49170/pinpoint');
   // mongoose.connect('mongodb://localhost:27017/pinpoint-dev');
   app.use(function(err, req, res, next) {
     res.status(err.status || 500);
